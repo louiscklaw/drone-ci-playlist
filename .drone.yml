@@ -9,6 +9,8 @@ steps:
   commands:
   - echo hello
   - echo world
+# https://docs.drone.io/pipeline/docker/syntax/trigger/
+
 kind: pipeline
 name: arm
 
@@ -17,6 +19,3714 @@ platform:
   arch: arm
 
 steps:
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
   - name: build
     image: ubuntu
     commands:
