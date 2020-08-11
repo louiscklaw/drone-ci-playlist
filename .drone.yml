@@ -20,3 +20,18 @@ steps:
   commands:
   - npm install
   - npm test
+
+---
+kind: pipeline
+name: after
+
+steps:
+- name: notify
+  image: plugins/slack
+  settings:
+    room: general
+    webhook: https://...
+
+depends_on:
+- backend
+- frontend
