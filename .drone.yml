@@ -1,6 +1,7 @@
+---
 kind: pipeline
 type: docker
-name: backend
+name: backend1
 
 steps:
 - name: build
@@ -12,7 +13,7 @@ steps:
 ---
 kind: pipeline
 type: docker
-name: frontend
+name: frontend1
 
 steps:
 - name: build
