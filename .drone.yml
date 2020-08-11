@@ -30,11 +30,6 @@ steps:
   commands:
     - echo 'hello arm'
 
-- name: build1
-    image: ubuntu
-    commands:
-      - echo 'hello arm'
-
 - name: build2
     image: ubuntu
     commands:
