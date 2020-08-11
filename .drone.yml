@@ -21,3 +21,74 @@ steps:
   commands:
   - npm install
   - npm test
+
+---
+kind: pipeline
+type: docker
+name: backend2
+
+steps:
+- name: build
+  image: golang
+  commands:
+  - go build
+  - go test
+
+---
+kind: pipeline
+type: docker
+name: frontend2
+
+steps:
+- name: build
+  image: node
+  commands:
+  - npm install
+  - npm test
+---
+kind: pipeline
+type: docker
+name: backend11
+
+steps:
+- name: build
+  image: golang
+  commands:
+  - go build
+  - go test
+
+---
+kind: pipeline
+type: docker
+name: frontend11
+
+steps:
+- name: build
+  image: node
+  commands:
+  - npm install
+  - npm test
+
+---
+kind: pipeline
+type: docker
+name: backend21
+
+steps:
+- name: build
+  image: golang
+  commands:
+  - go build
+  - go test
+
+---
+kind: pipeline
+type: docker
+name: frontend21
+
+steps:
+- name: build
+  image: node
+  commands:
+  - npm install
+  - npm test
