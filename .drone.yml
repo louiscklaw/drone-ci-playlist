@@ -9,3 +9,15 @@ steps:
   commands:
   - echo hello
   - echo world
+kind: pipeline
+name: arm
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+  - name: build
+    image: ubuntu
+    commands:
+      - echo 'hello arm'
