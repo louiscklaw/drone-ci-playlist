@@ -76,7 +76,7 @@ def lookupMergeDest(branch_name, path_to_check='.'):
       raise 'error during lookup merge name'
 
   except Exception as e:
-    pprint('error during lookup merge name')
+    print('error during lookup merge name "{}"'.format(front_name))
     raise e
 
 def gitPush(path_to_push="."):
