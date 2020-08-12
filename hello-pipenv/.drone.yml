@@ -1,0 +1,12 @@
+kind: pipeline
+type: docker
+name: hello-merger
+
+steps:
+- name: hello-merger
+  image: ubuntu
+  commands:
+  - apt-get update
+  - apt-get install -y python3 python3-pip
+  - python3 -m pip install pipenv
+  - pipenv sync
