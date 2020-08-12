@@ -9,13 +9,6 @@ steps:
   commands:
   - git clone https://$GITHUB_TOKEN@github.com/louiscklaw/drone-ci-playlist.git /tmp/test_git_dir
 
-  - cd hello-merger
-  -   pipenv run python3 ./src/main.py /tmp/test_git_dir
-
-  - cd /tmp/test_git_dir
-  -   git remote set-url origin https://$GITHUB_TOKEN@github.com/louiscklaw/drone-ci-playlist.git
-  -   git push
-
   environment:
     GITHUB_TOKEN:
       from_secret: GITHUB_TOKEN
