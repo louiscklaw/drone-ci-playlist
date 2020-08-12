@@ -5,7 +5,7 @@ name: hello_failure
 
 steps:
 - name: greeting
-  # failure: ignore
+  failure: ignore
   image: alpine
   commands:
   - ./fail.sh
