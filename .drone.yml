@@ -6,7 +6,7 @@ name: hello_failure
 steps:
 - name: greeting
   failure: ignore
-  image: alpine
+  image: ubuntu
   commands:
   - ./hello_failure/fail.sh
 ---
