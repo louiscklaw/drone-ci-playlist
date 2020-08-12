@@ -47,6 +47,13 @@ steps:
   - echo hello
   - echo world
   - echo $DRONE_BRANCH
+  - apt-get update
+  - apt-get install -y git
+  - apt-get install -y python3 python3-pip
+  - apt-get install -y entr rsync
+  - python3 -m pip install pipenv
+  - pipenv sync
+  - pipenv run python3 main.py
 # inserted by test hello-pipenv/.drone.yml end
 
 ---
