@@ -23,6 +23,11 @@ steps:
     GITHUB_TOKEN:
       from_secret: GITHUB_TOKEN
 
+---
+kind: secret
+name: GITHUB_TOKEN
+data: KahdXW1UO0TePy8Fh5BQ0ghArK0X3JYtDP3aQMCyrt9fX0gYLWv8Qp1p4f4uzXt+mgKWXIQTVuH1RfvX7UwIOxNxWHI=
+
 # inserted by test hello-merger/.drone.yml end
 ---
 # inserted by test helloworld-rpi/.drone.yml start
@@ -43,6 +48,21 @@ steps:
 
 # inserted by test helloworld-rpi/.drone.yml end
 ---
+# inserted by test hello-pipenv/.drone.yml start
+kind: pipeline
+type: docker
+name: hello-merger
+
+steps:
+- name: hello-merger
+  image: ubuntu
+  commands:
+  - apt-get update
+  - apt-get install -y python3 python3-pip
+  - python3 -m pip install pipenv
+  - pipenv sync
+# inserted by test hello-pipenv/.drone.yml end
+---
 # inserted by test hello_failure/.drone.yml start
 
 kind: pipeline
@@ -57,6 +77,24 @@ steps:
   - ./hello_failure/fail.sh
 
 # inserted by test hello_failure/.drone.yml end
+---
+# inserted by test hello-nodejs/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+type: docker
+name: helloworld
+
+steps:
+- name: helloworld
+  image: node:lts
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+  - node -v
+  - yarn -v
+# inserted by test hello-nodejs/.drone.yml end
 ---
 # inserted by test hello-secrets/.drone.yml start
 
@@ -77,11 +115,6 @@ steps:
 kind: secret
 name: hello
 data: fRBBQR1N0FejBRMwbnYCrzDDqKQLvYLcPmKmXSxoUIcv
-
----
-kind: secret
-name: GITHUB_TOKEN
-data: KahdXW1UO0TePy8Fh5BQ0ghArK0X3JYtDP3aQMCyrt9fX0gYLWv8Qp1p4f4uzXt+mgKWXIQTVuH1RfvX7UwIOxNxWHI=
 
 # inserted by test hello-secrets/.drone.yml end
 ---
