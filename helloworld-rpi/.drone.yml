@@ -1,6 +1,6 @@
 kind: pipeline
-type: docker
 name: helloworld-rpi
+type: docker
 
 platform:
   os: linux

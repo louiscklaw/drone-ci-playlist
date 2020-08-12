@@ -9,7 +9,9 @@ from pprint import pprint
 from subprocess import Popen, check_output
 
 drone_pipeline_seperator='''
+
 ---
+
 '''
 
 main_drone_yml_list = []
@@ -39,17 +41,27 @@ def replacePipelineName(content_in, pipeline_name):
   # pprint(content_in)
   import re
 
+
   # content_in = content_in.split('\n')
   # print(list(map(lambda x: re.sub('name: hello-merger','name: 123',x), content_in)))
   # after_process = list(map(lambda x: re.sub('^name: [\w|\d|-]+$','name: '+pipeline_name,x), content_in))
 
-  sys.exit()
+  text_to_search = 'kind: pipeline\nname: [\d|\w|-]+\n'
+  text_to_replace = 'kind: pipeline\nname: {}\n'.format(pipeline_name)
 
+  m = re.search(text_to_search, content_in)
 
+  if m is None:
+    print('cannot find text to replace')
+    raise 'cannot find text to replace'
+
+  content_in = re.sub(text_to_search, text_to_replace, content_in)
+  # print(content_in)
+  # sys.exit()
 
   # pprint(output)
   # sys.exit()
-  return output
+  return content_in
 
 def writeMainDroneYml(filepath, content):
   f_main_drone = open(filepath,'r+')
@@ -67,11 +79,13 @@ def main():
       if checkFileExist(drone_file):
         pipeline_name = os.path.dirname(drone_file)
 
+
         drone_yml_content = '\n'.join([
           '# inserted by test {} start'.format(drone_file),
           replacePipelineName(openProjectDroneYml(drone_file), pipeline_name),
-          '# inserted by test {} end'.format(drone_file)
+          '# inserted by test {} end'.format(drone_file),
         ])
+
 
         main_drone_yml_list.append(drone_yml_content)
 
@@ -94,5 +108,6 @@ if __name__ == '__main__':
     main()
     pass
   except Exception as e:
+    raise e
     sys.exit(99)
     pass
