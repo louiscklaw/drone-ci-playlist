@@ -8,9 +8,7 @@ steps:
   # failure: ignore
   image: alpine
   commands:
-  - echo hello
-  - echo world
-
+  - ./fail.sh
 ---
 
 kind: pipeline
