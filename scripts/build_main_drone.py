@@ -23,7 +23,7 @@ def runCommand(command_in):
 
 def listProjects():
   all_dirs = runCommand(['ls','-1']).split('\n')
-  return filter(lambda x: x not in ['scripts','','node_modules','package.json','yarn.lock'], all_dirs)
+  return filter(lambda x: x not in ['scripts','','node_modules','package.json','yarn.lock','hello-ubuntu'], all_dirs)
 
 def checkFileExist(filepath_to_check):
   return os.path.exists(filepath_to_check)

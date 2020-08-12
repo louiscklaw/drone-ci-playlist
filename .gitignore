@@ -1,5 +1,7 @@
 .env
+.local
 .python_history
+.bash_history
 
 **/node_modules
 **/build

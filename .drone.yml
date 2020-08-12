@@ -11,18 +11,22 @@ steps:
   - ./hello_failure/fail.sh
 
 ---
-
 kind: pipeline
 type: docker
 name: hello-merger
+
+platform:
+  os: linux
+  arch: arm
 
 steps:
 - name: hello-merger
   image: alpine
   commands:
-  - echo hello
-  - echo world
-
+  - cd hello-merger
+  -   echo hello
+  -   echo world
+  - cd
 ---
 
 kind: pipeline
@@ -63,7 +67,6 @@ steps:
   - echo world
 
 ---
-
 kind: pipeline
 type: docker
 name: helloworld-rpi

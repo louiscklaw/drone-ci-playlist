@@ -2,22 +2,23 @@
 
 set -x
 
-id
+# id
 
-pwd
+# pwd
 
-cd
+# cd
 
-pwd
+# pwd
 
-apt-get update
+# apt-get update
+# apt-get install -y git
+# apt-get install -y python3 python3-pip
+apt-get install -y entr
 
-apt-get install -y git
-apt-get install -y python3 python3-pip
+# python3 -m pip install pipenv
 
-python3 -m pip install pipenv
+# cd util
+#   pipenv sync
+# cd -
 
-cd hello-merger/old_util
-  pipenv sync
-  pipenv run python3 ./merge.py
-cd -
+pipenv run python3 ./test/test.py
