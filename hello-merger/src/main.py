@@ -14,18 +14,30 @@ def getActiveBranch(path_to_check='.'):
   list_branch_result = listBranch(path_to_check)
   return list(filter(lambda x: x.find('* ') ==0, list_branch_result))[0].replace('* ','')
 
-def checkoutBranch(branch_name_to_checkout, path_to_check="."):
+def checkoutBranch(branch_name_to_checkout, path_to_checkout="."):
   try:
-    check_output(['git','checkout',branch_name_to_checkout], cwd=path_to_check)
+    command_result = check_output(['git','checkout',branch_name_to_checkout], cwd=path_to_checkout)
+    return command_result
   except Exception as e:
+    pprint(command_result)
+    raise e
+
+def checkoutDevelop(path_to_checkout="."):
+  try:
+    command_result= checkoutBranch('develop',path_to_checkout)
+
+  except Exception as e:
+    pprint(command_result)
     raise e
 
 
-def checkoutDevelop():
-  return checkoutBranch('develop','.')
+def checkoutMaster(path_to_checkout="."):
+  try:
+    command_result= checkoutBranch('master',path_to_checkout)
 
-def checkoutMaster():
-  return checkoutBranch('master','.')
+  except Exception as e:
+    pprint(command_result)
+    raise e
 
 
 def helloworld():

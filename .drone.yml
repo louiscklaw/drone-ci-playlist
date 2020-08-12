@@ -1,16 +1,4 @@
-
-kind: pipeline
-type: docker
-name: hello_failure
-
-steps:
-- name: hello_failure
-  failure: ignore
-  image: ubuntu
-  commands:
-  - ./hello_failure/fail.sh
-
----
+# inserted by test hello-merger/.drone.yml start
 kind: pipeline
 type: docker
 name: hello-merger
@@ -27,7 +15,42 @@ steps:
   -   echo hello
   -   echo world
   - cd
+# inserted by test hello-merger/.drone.yml end
 ---
+# inserted by test helloworld-rpi/.drone.yml start
+kind: pipeline
+type: docker
+name: helloworld-rpi
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+- name: helloworld
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+
+# inserted by test helloworld-rpi/.drone.yml end
+---
+# inserted by test hello_failure/.drone.yml start
+
+kind: pipeline
+type: docker
+name: hello_failure
+
+steps:
+- name: hello_failure
+  failure: ignore
+  image: ubuntu
+  commands:
+  - ./hello_failure/fail.sh
+
+# inserted by test hello_failure/.drone.yml end
+---
+# inserted by test hello-secrets/.drone.yml start
 
 kind: pipeline
 name: hello-secrets
@@ -53,7 +76,9 @@ kind: secret
 name: slack_token
 data: UsAb4S8kczyyOKWbdgpd5YnKrq3YuOBHiPyt7/Eiwj6bjvMtqkyxiQEWQDdXwY8=
 
+# inserted by test hello-secrets/.drone.yml end
 ---
+# inserted by test helloworld/.drone.yml start
 
 kind: pipeline
 type: docker
@@ -66,18 +91,4 @@ steps:
   - echo hello
   - echo world
 
----
-kind: pipeline
-type: docker
-name: helloworld-rpi
-
-platform:
-  os: linux
-  arch: arm
-
-steps:
-- name: helloworld
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
+# inserted by test helloworld/.drone.yml end
