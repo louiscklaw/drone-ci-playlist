@@ -2,23 +2,17 @@
 kind: pipeline
 name: hello-secrets
 
-platform:
-  os: linux
-  arch: arm
-
 steps:
 - name: build
   image: ubuntu
   environment:
-    SLACK_TOKEN:
-      from_secret: slack_token
+    HELLO:
+      from_secret: hello
 
   commands:
-  - echo hello
-  - echo world
-
+  - echo $HELLO
 
 ---
 kind: secret
-name: slack_token
+name: hello
 data: UsAb4S8kczyyOKWbdgpd5YnKrq3YuOBHiPyt7/Eiwj6bjvMtqkyxiQEWQDdXwY8=
