@@ -35,6 +35,20 @@ def checkFileExist(filepath_to_check):
 def openProjectDroneYml(filepath):
   return ''.join(open(filepath,'r').readlines())
 
+def replacePipelineName(content_in, pipeline_name):
+  # pprint(content_in)
+  import re
+
+  content_in = content_in.split('\n')
+  # print(list(map(lambda x: re.sub('name: hello-merger','name: 123',x), content_in)))
+  after_process = list(map(lambda x: re.sub('^name: [\w|\d|-]+$','name: '+pipeline_name,x), content_in))
+
+  output = '\n'.join(after_process)
+
+  # pprint(output)
+  # sys.exit()
+  return output
+
 def writeMainDroneYml(filepath, content):
   f_main_drone = open(filepath,'r+')
   f_main_drone.truncate(0)
@@ -49,10 +63,11 @@ def main():
       drone_file = dirname+'/'+'.drone.yml'
 
       if checkFileExist(drone_file):
+        pipeline_name = os.path.dirname(drone_file)
 
         drone_yml_content = '\n'.join([
           '# inserted by test {} start'.format(drone_file),
-          openProjectDroneYml(drone_file),
+          replacePipelineName(openProjectDroneYml(drone_file), pipeline_name),
           '# inserted by test {} end'.format(drone_file)
         ])
 
