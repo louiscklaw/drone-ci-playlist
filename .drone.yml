@@ -9,16 +9,3 @@ steps:
   commands:
   - echo hello
   - echo world
-
----
-
-kind: pipeline
-type: docker
-name: default
-
-steps:
-- name: greeting1
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
