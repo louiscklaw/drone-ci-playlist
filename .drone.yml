@@ -39,6 +39,11 @@ steps:
     SLACK_TOKEN:
       from_secret: slack_token
 
+  commands:
+  - echo hello
+  - echo world
+
+
 ---
 kind: secret
 name: slack_token
@@ -49,6 +54,23 @@ data: UsAb4S8kczyyOKWbdgpd5YnKrq3YuOBHiPyt7/Eiwj6bjvMtqkyxiQEWQDdXwY8=
 kind: pipeline
 type: docker
 name: helloworld
+
+steps:
+- name: helloworld
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+
+---
+
+kind: pipeline
+type: docker
+name: helloworld-rpi
+
+platform:
+  os: linux
+  arch: arm
 
 steps:
 - name: helloworld
