@@ -1,0 +1,15 @@
+
+kind: pipeline
+type: docker
+name: helloworld
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+- name: helloworld
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
