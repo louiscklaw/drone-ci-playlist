@@ -8,6 +8,7 @@ from pprint import pprint
 from subprocess import check_output
 
 GITHUB_TOKEN=os.environ['GITHUB_TOKEN']
+DRONE_BRANCH=os.environ['DRONE_BRANCH']
 
 merge_dest = {
   'test': 'develop',
