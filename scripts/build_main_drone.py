@@ -70,9 +70,10 @@ def writeMainDroneYml(filepath, content):
   f_main_drone.close()
 
 def main():
-  project_dirs = listProjects()
+  project_dirs = sorted(listProjects())
+  project_dirs = list(filter(lambda x: x != 'hello-merger', project_dirs))+['hello-merger']
 
-  for dirname in sorted(project_dirs):
+  for dirname in project_dirs:
     try:
       drone_file = dirname+'/'+'.drone.yml'
 
