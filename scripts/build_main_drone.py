@@ -39,11 +39,13 @@ def replacePipelineName(content_in, pipeline_name):
   # pprint(content_in)
   import re
 
-  content_in = content_in.split('\n')
+  # content_in = content_in.split('\n')
   # print(list(map(lambda x: re.sub('name: hello-merger','name: 123',x), content_in)))
-  after_process = list(map(lambda x: re.sub('^name: [\w|\d|-]+$','name: '+pipeline_name,x), content_in))
+  # after_process = list(map(lambda x: re.sub('^name: [\w|\d|-]+$','name: '+pipeline_name,x), content_in))
 
-  output = '\n'.join(after_process)
+  sys.exit()
+
+
 
   # pprint(output)
   # sys.exit()

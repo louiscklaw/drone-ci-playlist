@@ -1,7 +1,7 @@
 # inserted by test hello-merger/.drone.yml start
 kind: pipeline
-type: docker
 name: hello-merger
+type: docker
 
 steps:
 - name: hello-merger
