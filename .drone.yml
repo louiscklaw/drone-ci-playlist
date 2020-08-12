@@ -101,6 +101,14 @@ steps:
     GITHUB_TOKEN:
       from_secret: GITHUB_TOKEN
 
+  # depends_on will update by scripts/build.sh
+  depends_on:
+    - helloworld
+    - helloworld-rpi
+    - hello-failure
+    - hello-merger
+    - hello-secrets
+
 ---
 kind: secret
 name: GITHUB_TOKEN
