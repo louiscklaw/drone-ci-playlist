@@ -1,3 +1,19 @@
+# inserted by test hello-failure/.drone.yml start
+kind: pipeline
+name: hello-failure
+type: docker
+
+steps:
+- name: hello_failure
+  failure: ignore
+  image: ubuntu
+  commands:
+  - ./hello_failure/fail.sh
+
+# inserted by test hello-failure/.drone.yml end
+
+---
+
 # inserted by test hello-merger/.drone.yml start
 kind: pipeline
 name: hello-merger
@@ -53,22 +69,6 @@ name: hello
 data: fRBBQR1N0FejBRMwbnYCrzDDqKQLvYLcPmKmXSxoUIcv
 
 # inserted by test hello-secrets/.drone.yml end
-
----
-
-# inserted by test hello_failure/.drone.yml start
-kind: pipeline
-name: hello_failure
-type: docker
-
-steps:
-- name: hello_failure
-  failure: ignore
-  image: ubuntu
-  commands:
-  - ./hello_failure/fail.sh
-
-# inserted by test hello_failure/.drone.yml end
 
 ---
 
