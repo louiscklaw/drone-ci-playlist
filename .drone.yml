@@ -5,7 +5,7 @@ name: hello-merger
 
 steps:
 - name: hello-merger
-  image: alpine
+  image: logickee/ubuntu-basic
   commands:
   - cd hello-merger
   -   pipenv run python3 ./src/main.py /tmp/test_git_dir
