@@ -26,6 +26,16 @@ steps:
   depends_on:
 <depends_on>
 
+
+
+trigger:
+  status:
+  - success
+  branch:
+  - develop
+  - test/*
+
+
 ---
 kind: secret
 name: GITHUB_TOKEN
