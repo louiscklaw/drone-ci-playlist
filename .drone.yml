@@ -151,7 +151,6 @@ steps:
     - helloworld-rpi
     - hello-pipenv
     - hello-failure
-    - hello-merger
     - hello-secrets
     - hello-nodejs
 

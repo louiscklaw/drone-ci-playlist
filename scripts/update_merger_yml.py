@@ -6,7 +6,7 @@ from subprocess import Popen, check_output
 SCRIPTS_DIR=os.path.abspath(os.path.dirname(__file__))
 PROJ_HOME = os.path.abspath(SCRIPTS_DIR+'/..')
 
-SKIP_LIST=['.','.git','scripts','x86-runner-setup','hello-ubuntu','drone-python-helloworld','']
+SKIP_LIST=['.','.git','scripts','x86-runner-setup','hello-ubuntu','drone-python-helloworld','','hello-merger']
 
 def runCommand(command_in):
   return check_output(command_in).decode('utf-8')
