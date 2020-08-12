@@ -1,4 +1,5 @@
 .env
+.python_history
 
 **/node_modules
 **/build

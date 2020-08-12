@@ -4,7 +4,7 @@ type: docker
 name: hello_failure
 
 steps:
-- name: greeting
+- name: hello_failure
   failure: ignore
   image: ubuntu
   commands:

@@ -4,7 +4,7 @@ type: docker
 name: helloworld
 
 steps:
-- name: greeting
+- name: helloworld
   image: alpine
   commands:
   - echo hello
