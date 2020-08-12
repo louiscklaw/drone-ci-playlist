@@ -82,6 +82,30 @@ data: fRBBQR1N0FejBRMwbnYCrzDDqKQLvYLcPmKmXSxoUIcv
 
 ---
 
+# inserted by test hello-slack/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: hello-slack
+type: docker
+
+steps:
+- name: notify
+  image: plugins/slack
+  settings:
+    webhook:
+      from_secret: webhook
+
+
+---
+kind: secret
+name: webhook
+data: Bpoft0irrMGM2Kdco5Fc3lnLhO/JkoaZvQMr4qG2N4ZVVn9v2IY5n+wQ31lhup2Ew0rhCfSuz0Y+oO+kI5wOvV1VF48C4r8l3Hd4TNkTGPCoCWwNuAlA+S0t8Nwe+L3y4cRvzJoRNnrdGCk=
+
+# inserted by test hello-slack/.drone.yml end
+
+---
+
 # inserted by test helloworld/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -149,6 +173,7 @@ steps:
   depends_on:
     - helloworld
     - helloworld-rpi
+    - hello-slack
     - hello-pipenv
     - hello-failure
     - hello-secrets
