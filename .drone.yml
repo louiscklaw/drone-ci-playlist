@@ -34,11 +34,13 @@ name: hello-node
 
 steps:
 - name: helloworld
-  image: alpine
+  image: node:lts
   commands:
   - echo hello
   - echo world
   - echo $DRONE_BRANCH
+  - node -v
+  - yarn -v
 # inserted by test hello-node/.drone.yml end
 ---
 # inserted by test helloworld-rpi/.drone.yml start
