@@ -58,7 +58,7 @@ def writeMainDroneYml(filepath, content):
 def main():
   project_dirs = listProjects()
 
-  for dirname in project_dirs:
+  for dirname in sorted(project_dirs):
     try:
       drone_file = dirname+'/'+'.drone.yml'
 
