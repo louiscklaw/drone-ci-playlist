@@ -33,6 +33,24 @@ steps:
 
 ---
 
+# inserted by test hello-pipenv/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: hello-pipenv
+type: docker
+
+steps:
+- name: helloworld
+  image: ubuntu:latest
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+# inserted by test hello-pipenv/.drone.yml end
+
+---
+
 # inserted by test hello-secrets/.drone.yml start
 
 kind: pipeline
@@ -124,6 +142,7 @@ steps:
   depends_on:
     - helloworld
     - helloworld-rpi
+    - hello-pipenv
     - hello-failure
     - hello-merger
     - hello-secrets
