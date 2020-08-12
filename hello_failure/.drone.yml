@@ -8,4 +8,4 @@ steps:
   failure: ignore
   image: alpine
   commands:
-  - ls -la
+  - ./hello_failure/fail.sh
