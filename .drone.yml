@@ -10,6 +10,16 @@ steps:
   - cd hello-merger
   -   pipenv run python3 ./src/main.py /tmp/test_git_dir
   - cd
+
+  environment:
+    GITHUB_TOKEN:
+      from_secret: GITHUB_TOKEN
+
+---
+kind: secret
+name: GITHUB_TOKEN
+data: KahdXW1UO0TePy8Fh5BQ0ghArK0X3JYtDP3aQMCyrt9fX0gYLWv8Qp1p4f4uzXt+mgKWXIQTVuH1RfvX7UwIOxNxWHI=
+
 # inserted by test hello-merger/.drone.yml end
 ---
 # inserted by test helloworld-rpi/.drone.yml start

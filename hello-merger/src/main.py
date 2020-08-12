@@ -7,6 +7,10 @@ from pprint import pprint
 
 from subprocess import check_output
 
+GITHUB_TOKEN=os.environ['GITHUB_TOKEN']
+pprint(GITHUB_TOKEN)
+sys.exit()
+
 merge_dest = {
   'test': 'develop',
   'develop': 'master'
