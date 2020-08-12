@@ -14,6 +14,25 @@ steps:
 
 ---
 
+# inserted by test hello-nodejs/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: hello-nodejs
+type: docker
+
+steps:
+- name: helloworld
+  image: node:lts
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+# inserted by test hello-nodejs/.drone.yml end
+
+---
+
 # inserted by test hello-secrets/.drone.yml start
 
 kind: pipeline
@@ -108,6 +127,7 @@ steps:
     - hello-failure
     - hello-merger
     - hello-secrets
+    - hello-nodejs
 
 ---
 kind: secret
