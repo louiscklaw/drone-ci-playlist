@@ -1,6 +1,19 @@
 
 kind: pipeline
 type: docker
+name: hello_failure
+
+steps:
+- name: greeting
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+
+---
+
+kind: pipeline
+type: docker
 name: helloworld
 
 steps:
