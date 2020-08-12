@@ -26,7 +26,19 @@ steps:
 # inserted by test hello-merger/.drone.yml end
 ---
 # inserted by test hello-node/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
 
+kind: pipeline
+type: docker
+name: hello-node
+
+steps:
+- name: helloworld
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
 # inserted by test hello-node/.drone.yml end
 ---
 # inserted by test helloworld-rpi/.drone.yml start
