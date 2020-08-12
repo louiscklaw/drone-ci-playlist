@@ -55,4 +55,5 @@ pwd
 
 cd hello-merger
   pipenv run python3 ./test/test.py /tmp/test_git_dir
+  # pipenv run python3 ./src/main.py /tmp/test_git_dir
 cd ..

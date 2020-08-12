@@ -48,16 +48,18 @@ def main():
     try:
       drone_file = dirname+'/'+'.drone.yml'
 
-      if not checkFileExist(drone_file):
-        raise 'wanted drone file not exist'
+      if checkFileExist(drone_file):
 
-      drone_yml_content = '\n'.join([
-        '# inserted by test {} start'.format(drone_file),
-        openProjectDroneYml(drone_file),
-        '# inserted by test {} end'.format(drone_file)
-      ])
+        drone_yml_content = '\n'.join([
+          '# inserted by test {} start'.format(drone_file),
+          openProjectDroneYml(drone_file),
+          '# inserted by test {} end'.format(drone_file)
+        ])
 
-      main_drone_yml_list.append(drone_yml_content)
+        main_drone_yml_list.append(drone_yml_content)
+
+      # else:
+      #   raise 'wanted drone file not exist'
 
     except Exception as e:
       print('drone file not found: "{}"'.format(drone_file))

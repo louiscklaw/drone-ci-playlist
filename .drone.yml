@@ -3,17 +3,12 @@ kind: pipeline
 type: docker
 name: hello-merger
 
-platform:
-  os: linux
-  arch: arm
-
 steps:
 - name: hello-merger
   image: alpine
   commands:
   - cd hello-merger
-  -   echo hello
-  -   echo world
+  -   pipenv run python3 ./src/main.py /tmp/test_git_dir
   - cd
 # inserted by test hello-merger/.drone.yml end
 ---
@@ -55,25 +50,19 @@ steps:
 kind: pipeline
 name: hello-secrets
 
-platform:
-  os: linux
-  arch: arm
-
 steps:
 - name: build
   image: ubuntu
   environment:
-    SLACK_TOKEN:
-      from_secret: slack_token
+    HELLO:
+      from_secret: hello
 
   commands:
-  - echo hello
-  - echo world
-
+  - echo $HELLO
 
 ---
 kind: secret
-name: slack_token
+name: hello
 data: UsAb4S8kczyyOKWbdgpd5YnKrq3YuOBHiPyt7/Eiwj6bjvMtqkyxiQEWQDdXwY8=
 
 # inserted by test hello-secrets/.drone.yml end

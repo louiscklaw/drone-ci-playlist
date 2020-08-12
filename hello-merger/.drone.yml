@@ -2,15 +2,10 @@ kind: pipeline
 type: docker
 name: hello-merger
 
-platform:
-  os: linux
-  arch: arm
-
 steps:
 - name: hello-merger
   image: alpine
   commands:
   - cd hello-merger
-  -   echo hello
-  -   echo world
+  -   pipenv run python3 ./src/main.py /tmp/test_git_dir
   - cd
