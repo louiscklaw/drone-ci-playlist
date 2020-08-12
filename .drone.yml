@@ -8,6 +8,8 @@ steps:
   image: logickee/ubuntu-basic
   commands:
   - git clone https://$GITHUB_TOKEN@github.com/louiscklaw/drone-ci-playlist.git /tmp/test_git_dir
+  - cd hello-merger
+  -   pipenv run python3 ./src/main.py /tmp/test_git_dir
 
   environment:
     GITHUB_TOKEN:
