@@ -9,3 +9,9 @@ steps:
   commands:
   - echo hello
   - echo world
+
+- name: greeting1
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
