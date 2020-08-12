@@ -8,7 +8,7 @@ steps:
   failure: ignore
   image: ubuntu
   commands:
-  - ./hello_failure/fail.sh
+  - ./hello-failure/fail.sh
 
 # inserted by test hello-failure/.drone.yml end
 

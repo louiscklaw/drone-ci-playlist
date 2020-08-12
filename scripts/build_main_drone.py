@@ -8,6 +8,8 @@ import traceback
 from pprint import pprint
 from subprocess import Popen, check_output
 
+from update_merger_yml import *
+
 drone_pipeline_seperator='''
 
 ---
@@ -23,9 +25,12 @@ def getGitignoreContent():
 def runCommand(command_in):
   return check_output(command_in).decode('utf-8')
 
+def listDirs():
+  return runCommand(['find','.','-maxdepth','1','-type','d']).split('\n')
+
 def listProjects():
   # all_dirs = runCommand(['ls','-1']).split('\n')
-  all_dirs = runCommand(['find','.','-maxdepth','1','-type','d']).split('\n')
+  all_dirs = listDirs()
   all_dirs = map(lambda x: x.replace('./',''), all_dirs)
   all_dirs = filter(lambda x: x not in ['.','.git','.cache','scripts','','node_modules','package.json','yarn.lock','hello-ubuntu','.local'], all_dirs)
   return all_dirs
@@ -76,20 +81,26 @@ def main():
   for dirname in project_dirs:
     try:
       drone_file = dirname+'/'+'.drone.yml'
+      pipeline_name = os.path.dirname(drone_file)
 
       if checkFileExist(drone_file):
-        pipeline_name = os.path.dirname(drone_file)
+        temp = ''
 
+        if dirname == 'hello-merger':
+          temp = updateDependsOn(
+            replacePipelineName(openProjectDroneYml(drone_file), pipeline_name)
+          )
+
+        else:
+          temp = replacePipelineName(openProjectDroneYml(drone_file), pipeline_name)
 
         drone_yml_content = '\n'.join([
           '# inserted by test {} start'.format(drone_file),
-          replacePipelineName(openProjectDroneYml(drone_file), pipeline_name),
+          temp,
           '# inserted by test {} end'.format(drone_file),
         ])
 
-
         main_drone_yml_list.append(drone_yml_content)
-
       # else:
       #   raise 'wanted drone file not exist'
 
