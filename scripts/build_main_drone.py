@@ -23,7 +23,7 @@ def runCommand(command_in):
 
 def listProjects():
   # all_dirs = runCommand(['ls','-1']).split('\n')
-  all_dirs = runCommand(['find','.','-type','d','-maxdepth','1']).split('\n')
+  all_dirs = runCommand(['find','.','-maxdepth','1','-type','d']).split('\n')
   all_dirs = map(lambda x: x.replace('./',''), all_dirs)
   all_dirs = filter(lambda x: x not in ['.','.git','.cache','scripts','','node_modules','package.json','yarn.lock','hello-ubuntu','.local'], all_dirs)
   return all_dirs
