@@ -143,9 +143,12 @@ steps:
 - name: helloworld
   image: alpine
   commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
+  - sudo add-apt-repository -y ppa:freecad-maintainers/freecad-stable
+  - sudo apt-get update
+  - sudo apt-get install -y freecad freecad-python3
+  - sudo mkdir /usr/lib/freecad-python3/Mod
+
+  - for i in $(find . -name '*.FCStd'); do python3 travis-freecad-checking/freecad_open_test.py $i; done
 
 # inserted by test hello-freecad-checking/.drone.yml end
 
@@ -276,6 +279,24 @@ steps:
 
 ---
 
+# inserted by test hello-reports/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: hello-reports
+type: docker
+
+steps:
+- name: helloworld
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+# inserted by test hello-reports/.drone.yml end
+
+---
+
 # inserted by test hello-secrets/.drone.yml start
 
 kind: pipeline
@@ -357,6 +378,7 @@ depends_on:
   - hello-nodejs
   - hello-pipenv
   - hello-react
+  - hello-reports
   - hello-secrets
   - helloworld
 
