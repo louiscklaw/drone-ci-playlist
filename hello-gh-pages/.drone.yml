@@ -5,33 +5,9 @@ name: helloworld
 type: docker
 
 steps:
-- name: build
-  image: ubuntu
-  environment:
-    HELLO:
-      from_secret: hello
-
+- name: helloworld
+  image: node:lts
   commands:
-  - echo $HELLO
-
-- name: publish
-  image: plugins/gh-pages
-  settings:
-    username:
-      from_secret: github_u
-    password:
-      from_secret: github_p
-    pages_directory: hello-gh-pages/public/
-
----
-kind: secret
-name: hello
-data: fRBBQR1N0FejBRMwbnYCrzDDqKQLvYLcPmKmXSxoUIcv
-
-kind: secret
-name: github_u
-data: 0+6dJTLwzNI/Ao/rcqQLeDm+1KVusQoksZdZ/WKtwpDOZJ/inkI=
-
-kind: secret
-name: github_p
-data: vUJejxoMXAulCSm+QrpzNNRGqreHZOIxAXFuSV6IOh4pak0C1JMKOSG0Jiw=
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
