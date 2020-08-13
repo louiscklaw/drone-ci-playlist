@@ -31,9 +31,11 @@ def listDirs():
 
 def listProjects():
   # all_dirs = runCommand(['ls','-1']).split('\n')
-  all_dirs = listDirs()
-  all_dirs = map(lambda x: x.replace('./',''), all_dirs)
-  all_dirs = filter(lambda x: x not in ['.','.git','.cache','scripts','','node_modules','package.json','yarn.lock','hello-ubuntu','.local'], all_dirs)
+  # all_dirs = listDirs()
+  # all_dirs = map(lambda x: x.replace('./',''), all_dirs)
+  # all_dirs = filter(lambda x: x not in ['.','.git','.cache','scripts','','node_modules','package.json','yarn.lock','hello-ubuntu','.local'], all_dirs)
+
+  all_dirs = map(lambda x: x.replace('./',''), directory_with_valid_drone_yml)
   return all_dirs
 
 def checkFileExist(filepath_to_check):

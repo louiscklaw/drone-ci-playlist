@@ -249,6 +249,30 @@ data: fRBBQR1N0FejBRMwbnYCrzDDqKQLvYLcPmKmXSxoUIcv
 
 ---
 
+# inserted by test hello-slack/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+# kind: pipeline
+# name: hello-slack
+# type: docker
+
+# steps:
+# - name: notify
+#   image: plugins/slack
+#   settings:
+#     webhook:
+#       from_secret: webhook
+
+
+# ---
+# kind: secret
+# name: webhook
+# data: UG4xdy6hgIXNHj5c/DEXZUBALxgF9A6+UCsXhz5AeFkZO9TYKWyMVoYIcBQvTOnODdQYxpyUjLr3MXx8dmA3FPs5ohABqytzzpVr3ksYdT0CQ+OVQ9wZSvsxj631vq4CfsO6n7NIW1DWcqw=
+
+# inserted by test hello-slack/.drone.yml end
+
+# ---
+
 # inserted by test helloworld/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -295,18 +319,22 @@ steps:
 # ERROR_CHECK: linter: invalid or unknown pipeline dependency
 # depends_on will update by scripts/build.sh
 depends_on:
-  - hello-appium
-  - hello-appium-x86-image
-  - hello-appium-x86-image-with-options
-  - hello-build-stages
-  - hello-failure
   - hello-gatsby
+  - hello-appium-x86-image
   - hello-gh-pages
-  - hello-nodejs
-  - hello-pipenv
   - hello-react
+  - hello-appium
+  # - helloworld-rpi
+  - hello-pipenv
+  - hello-build-stages
+  # - hello-slack
+  - hello-nodejs
+  # - hello-logickee-raspberry-appium
   - hello-secrets
+  # - hello-appium_arm64
   - helloworld
+  - hello-failure
+  - hello-appium-x86-image-with-options
 
 
 trigger:
@@ -320,6 +348,6 @@ trigger:
 ---
 kind: secret
 name: GITHUB_TOKEN
-data: KahdXW1UO0TePy8Fh5BQ0ghArK0X3JYtDP3aQMCyrt9fX0gYLWv8Qp1p4f4uzXt+mgKWXIQTVuH1RfvX7UwIOxNxWHI=
+data: jsiRimOeYe7wYVsxd2i842cuCKoX7yChzojECHEcbBV5lx8Abx7H5vr0f4UfkB8uB60p6rIbl+KqOj5LCcpY2nLCeDU=
 
 # inserted by test hello-merger/.drone.yml end
