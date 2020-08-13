@@ -1,80 +1,13 @@
-# inserted by test hello-appium/.drone.yml.arm start
-# https://docs.drone.io/pipeline/environment/reference/
-
-kind: pipeline
-name: test logickee/appium_arm64
-type: docker
-
-platform:
-  os: linux
-  arch: arm
-
-steps:
-
-- name: test
-  image: logickee/appium_arm64
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-
----
-
-kind: pipeline
-name: test logickee/raspberry-appium
-type: docker
-
-platform:
-  os: linux
-  arch: arm
-
-- name: test
-  image: logickee/raspberry-appium
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-
-# inserted by test hello-appium/.drone.yml.arm end
-
----
-
 # inserted by test hello-appium/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
 kind: pipeline
-name: test appium/appium
+name: hello-appium
 type: docker
 
 steps:
 - name: test
   image: appium/appium
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-
----
-
-kind: pipeline
-name: test logickee/appium_x86_basic
-type: docker
-
-- name: test
-  image: logickee/appium_x86_basic
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-
----
-
-kind: pipeline
-name: test logickee/appium_x86_plus_optional
-type: docker
-
-- name: test
-  image: logickee/appium_x86_plus_optional
   commands:
   - echo hello
   - echo world
