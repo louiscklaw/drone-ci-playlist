@@ -23,7 +23,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "scripts/build_main_drone.sh"
+      "pre-commit": ""
     }
   },
   "devDependencies": {}
