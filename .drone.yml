@@ -72,9 +72,6 @@ steps:
       from_secret: github_p
     pages_directory: hello-gh-pages/public/
 
-  commands:
-  - echo $HELLO
-
 ---
 
 kind: secret
