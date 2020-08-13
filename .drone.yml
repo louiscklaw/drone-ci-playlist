@@ -252,22 +252,22 @@ data: fRBBQR1N0FejBRMwbnYCrzDDqKQLvYLcPmKmXSxoUIcv
 # inserted by test hello-slack/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
-kind: pipeline
-name: hello-slack
-type: docker
+# kind: pipeline
+# name: hello-slack
+# type: docker
 
-steps:
-- name: notify
-  image: plugins/slack
-  settings:
-    webhook:
-      from_secret: webhook
+# steps:
+# - name: notify
+#   image: plugins/slack
+#   settings:
+#     webhook:
+#       from_secret: webhook
 
 
----
-kind: secret
-name: webhook
-data: UG4xdy6hgIXNHj5c/DEXZUBALxgF9A6+UCsXhz5AeFkZO9TYKWyMVoYIcBQvTOnODdQYxpyUjLr3MXx8dmA3FPs5ohABqytzzpVr3ksYdT0CQ+OVQ9wZSvsxj631vq4CfsO6n7NIW1DWcqw=
+# ---
+# kind: secret
+# name: webhook
+# data: UG4xdy6hgIXNHj5c/DEXZUBALxgF9A6+UCsXhz5AeFkZO9TYKWyMVoYIcBQvTOnODdQYxpyUjLr3MXx8dmA3FPs5ohABqytzzpVr3ksYdT0CQ+OVQ9wZSvsxj631vq4CfsO6n7NIW1DWcqw=
 
 # inserted by test hello-slack/.drone.yml end
 
