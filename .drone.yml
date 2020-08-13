@@ -149,7 +149,7 @@ steps:
 ---
 kind: secret
 name: gh_token
-data: A4HTyIEsqndgXqUlbBPlj3tNMBny+0O45/DsakTIwMtf4KiWxSH4UbIQvstyutNcU1q9SLemgjDkxpncaBtl8MGIVzY=
+data: jsiRimOeYe7wYVsxd2i842cuCKoX7yChzojECHEcbBV5lx8Abx7H5vr0f4UfkB8uB60p6rIbl+KqOj5LCcpY2nLCeDU=
 
 # inserted by test hello-gh-pages/.drone.yml end
 
@@ -267,7 +267,7 @@ steps:
 ---
 kind: secret
 name: webhook
-data: Bpoft0irrMGM2Kdco5Fc3lnLhO/JkoaZvQMr4qG2N4ZVVn9v2IY5n+wQ31lhup2Ew0rhCfSuz0Y+oO+kI5wOvV1VF48C4r8l3Hd4TNkTGPCoCWwNuAlA+S0t8Nwe+L3y4cRvzJoRNnrdGCk=
+data: KtUfQwzP1QzNwHYVaBn4YnIVhTEJA8P4WH1/ukejWTRolXmsz7ECre2m4yiAqQkYsNes+Cn4pgtGR0SLVcgEQJhrxnRDcHY34U5cQec3bCOBR1dYkj+9xS9JXIKRvO10Ni8p9nEQbBIuJjg=
 
 # inserted by test hello-slack/.drone.yml end
 
@@ -348,6 +348,6 @@ trigger:
 ---
 kind: secret
 name: GITHUB_TOKEN
-data: KahdXW1UO0TePy8Fh5BQ0ghArK0X3JYtDP3aQMCyrt9fX0gYLWv8Qp1p4f4uzXt+mgKWXIQTVuH1RfvX7UwIOxNxWHI=
+data: jsiRimOeYe7wYVsxd2i842cuCKoX7yChzojECHEcbBV5lx8Abx7H5vr0f4UfkB8uB60p6rIbl+KqOj5LCcpY2nLCeDU=
 
 # inserted by test hello-merger/.drone.yml end
