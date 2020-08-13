@@ -5,13 +5,31 @@ name: helloworld
 type: docker
 
 steps:
-
 - name: offical appium image
   image: appium/appium
   commands:
   - echo hello
   - echo world
   - echo $DRONE_BRANCH
+
+---
+
+kind: pipeline
+name: helloworld
+type: docker
+
+- name: test logickee/appium_x86_basic
+  image: logickee/appium_x86_basic
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+---
+
+kind: pipeline
+name: helloworld
+type: docker
 
 - name: appium x86 and options
   image: logickee/appium_x86_plus_optional

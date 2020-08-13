@@ -84,6 +84,27 @@ def main():
       drone_file = dirname+'/'+'.drone.yml'
       pipeline_name = os.path.dirname(drone_file)
 
+      drone_file_arm = dirname+'/'+'.drone.yml.arm'
+
+      if checkFileExist(drone_file_arm):
+        temp = ''
+
+        if dirname == 'hello-merger':
+          temp = updateDependsOn(
+            replacePipelineName(openProjectDroneYml(drone_file), pipeline_name)
+          )
+
+        else:
+          temp = replacePipelineName(openProjectDroneYml(drone_file), pipeline_name)
+
+        drone_yml_content = '\n'.join([
+          '# inserted by test {} start'.format(drone_file),
+          temp,
+          '# inserted by test {} end'.format(drone_file),
+        ])
+
+        main_drone_yml_list.append(drone_yml_content)
+
       if checkFileExist(drone_file):
         temp = ''
 

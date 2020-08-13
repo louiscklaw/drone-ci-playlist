@@ -1,0 +1,35 @@
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: helloworld
+type: docker
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+
+- name: test logickee/appium_arm64
+  image: logickee/appium_arm64
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+---
+
+kind: pipeline
+name: helloworld
+type: docker
+
+platform:
+  os: linux
+  arch: arm
+
+- name: test logickee/raspberry-appium
+  image: logickee/raspberry-appium
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
