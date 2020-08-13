@@ -27,6 +27,19 @@ steps:
   - echo world
   - echo $DRONE_BRANCH
 
+---
+
+kind: pipeline
+name: test-appium-x86-image-with-options
+type: docker
+
+- name: test
+  image: logickee/appium_x86_plus_optional
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
 # inserted by test hello-appium/.drone.yml end
 
 ---
