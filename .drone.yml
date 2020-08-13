@@ -70,7 +70,7 @@ steps:
       from_secret: github_u
     password:
       from_secret: github_p
-    pages_directory: public/
+    pages_directory: hello-gh-pages/public/
 
   commands:
   - echo $HELLO
