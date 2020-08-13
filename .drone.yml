@@ -49,9 +49,11 @@ steps:
 ---
 
 # inserted by test hello-gh-pages/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
 
 kind: pipeline
 name: hello-gh-pages
+type: docker
 
 steps:
 - name: build
@@ -63,10 +65,27 @@ steps:
   commands:
   - echo $HELLO
 
+- name: publish
+  image: plugins/gh-pages
+  settings:
+    username:
+      from_secret: github_u
+    password:
+      from_secret: github_p
+    pages_directory: hello-gh-pages/public/
+
 ---
 kind: secret
 name: hello
 data: fRBBQR1N0FejBRMwbnYCrzDDqKQLvYLcPmKmXSxoUIcv
+
+kind: secret
+name: github_u
+data: 0+6dJTLwzNI/Ao/rcqQLeDm+1KVusQoksZdZ/WKtwpDOZJ/inkI=
+
+kind: secret
+name: github_p
+data: vUJejxoMXAulCSm+QrpzNNRGqreHZOIxAXFuSV6IOh4pak0C1JMKOSG0Jiw=
 
 # inserted by test hello-gh-pages/.drone.yml end
 
