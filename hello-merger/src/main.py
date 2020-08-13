@@ -12,7 +12,8 @@ DRONE_BRANCH=os.environ['DRONE_BRANCH']
 
 merge_dest = {
   'test': 'develop',
-  'develop': 'master'
+  'develop': 'master',
+  'dependabot': 'test'
 }
 
 def listBranch(path_to_check='.'):
