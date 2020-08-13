@@ -60,9 +60,9 @@ steps:
   image: node:lts
   environment:
     GH_TOKEN:
-      from_secret: GH_TOKEN
+      from_secret: gh_token
   commands:
-    - git clone http://louiscklaw:GH_TOKEN@github.com/louiscklaw/drone-ci-playlist /tmp/drone-ci-playlist
+    - git clone http://louiscklaw:$GH_TOKEN@github.com/louiscklaw/drone-ci-playlist /tmp/drone-ci-playlist
 
     - cd /tmp/drone-ci-playlist
     -   cd hello-gh-pages
@@ -71,7 +71,7 @@ steps:
 
 ---
 kind: secret
-name: GH_TOKEN
+name: gh_token
 data: A4HTyIEsqndgXqUlbBPlj3tNMBny+0O45/DsakTIwMtf4KiWxSH4UbIQvstyutNcU1q9SLemgjDkxpncaBtl8MGIVzY=
 
 # inserted by test hello-gh-pages/.drone.yml end
