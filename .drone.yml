@@ -51,26 +51,6 @@ steps:
 
 ---
 
-# inserted by test hello-appium_arm64/.drone.yml start
-kind: pipeline
-name: hello-appium_arm64
-type: docker
-
-platform:
-  os: linux
-  arch: arm
-
-steps:
-- name: test
-  image: logickee/appium_arm64
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-# inserted by test hello-appium_arm64/.drone.yml end
-
----
-
 # inserted by test hello-build-stages/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -172,27 +152,6 @@ name: gh_token
 data: A4HTyIEsqndgXqUlbBPlj3tNMBny+0O45/DsakTIwMtf4KiWxSH4UbIQvstyutNcU1q9SLemgjDkxpncaBtl8MGIVzY=
 
 # inserted by test hello-gh-pages/.drone.yml end
-
----
-
-# inserted by test hello-logickee-raspberry-appium/.drone.yml start
-kind: pipeline
-name: hello-logickee-raspberry-appium
-type: docker
-
-platform:
-  os: linux
-  arch: arm
-
-steps:
-- name: test
-  image: logickee/raspberry-appium
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-
-# inserted by test hello-logickee-raspberry-appium/.drone.yml end
 
 ---
 
@@ -329,26 +288,6 @@ steps:
   - echo world
   - echo $DRONE_BRANCH
 # inserted by test helloworld/.drone.yml end
-
----
-
-# inserted by test helloworld-rpi/.drone.yml start
-kind: pipeline
-name: helloworld-rpi
-type: docker
-
-platform:
-  os: linux
-  arch: arm
-
-steps:
-- name: helloworld
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
-
-# inserted by test helloworld-rpi/.drone.yml end
 
 ---
 
