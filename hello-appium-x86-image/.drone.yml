@@ -1,12 +1,10 @@
-# https://docs.drone.io/pipeline/environment/reference/
-
 kind: pipeline
-name: test-appium-appium
+name: test-appium-x86-image
 type: docker
 
 steps:
 - name: test
-  image: appium/appium
+  image: logickee/appium_x86_basic
   commands:
   - echo hello
   - echo world

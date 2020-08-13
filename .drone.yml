@@ -13,10 +13,13 @@ steps:
   - echo world
   - echo $DRONE_BRANCH
 
+# inserted by test hello-appium/.drone.yml end
+
 ---
 
+# inserted by test hello-appium-x86-image/.drone.yml start
 kind: pipeline
-name: test-appium-x86-image
+name: hello-appium-x86-image
 type: docker
 
 steps:
@@ -27,10 +30,13 @@ steps:
   - echo world
   - echo $DRONE_BRANCH
 
+# inserted by test hello-appium-x86-image/.drone.yml end
+
 ---
 
+# inserted by test hello-appium-x86-image-with-options/.drone.yml start
 kind: pipeline
-name: test-appium-x86-image-with-options
+name: hello-appium-x86-image-with-options
 type: docker
 
 steps:
@@ -41,7 +47,27 @@ steps:
   - echo world
   - echo $DRONE_BRANCH
 
-# inserted by test hello-appium/.drone.yml end
+# inserted by test hello-appium-x86-image-with-options/.drone.yml end
+
+---
+
+# inserted by test hello-appium_arm64/.drone.yml start
+kind: pipeline
+name: hello-appium_arm64
+type: docker
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+- name: test
+  image: logickee/appium_arm64
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+# inserted by test hello-appium_arm64/.drone.yml end
 
 ---
 
@@ -146,6 +172,27 @@ name: gh_token
 data: A4HTyIEsqndgXqUlbBPlj3tNMBny+0O45/DsakTIwMtf4KiWxSH4UbIQvstyutNcU1q9SLemgjDkxpncaBtl8MGIVzY=
 
 # inserted by test hello-gh-pages/.drone.yml end
+
+---
+
+# inserted by test hello-logickee-raspberry-appium/.drone.yml start
+kind: pipeline
+name: hello-logickee-raspberry-appium
+type: docker
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+- name: test
+  image: logickee/raspberry-appium
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+# inserted by test hello-logickee-raspberry-appium/.drone.yml end
 
 ---
 
@@ -334,6 +381,7 @@ steps:
 # depends_on will update by scripts/build.sh
 depends_on:
   - hello-gatsby
+  - hello-appium-x86-image
   - hello-gh-pages
   - hello-react
   - hello-appium
@@ -342,9 +390,12 @@ depends_on:
   - hello-build-stages
   - hello-slack
   - hello-nodejs
+  - hello-logickee-raspberry-appium
   - hello-secrets
+  - hello-appium_arm64
   - helloworld
   - hello-failure
+  - hello-appium-x86-image-with-options
 
 
 trigger:

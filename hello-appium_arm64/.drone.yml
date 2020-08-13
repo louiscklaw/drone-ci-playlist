@@ -1,0 +1,15 @@
+kind: pipeline
+name: test logickee-appium_arm64
+type: docker
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+- name: test
+  image: logickee/appium_arm64
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH

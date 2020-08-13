@@ -1,12 +1,14 @@
-# https://docs.drone.io/pipeline/environment/reference/
-
 kind: pipeline
-name: test-appium-appium
+name: test logickee-raspberry-appium
 type: docker
+
+platform:
+  os: linux
+  arch: arm
 
 steps:
 - name: test
-  image: appium/appium
+  image: logickee/raspberry-appium
   commands:
   - echo hello
   - echo world
