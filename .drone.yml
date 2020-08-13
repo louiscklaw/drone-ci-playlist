@@ -58,11 +58,19 @@ type: docker
 steps:
 - name: helloworld
   image: node:lts
+  environment:
+    GH_TOKEN:
+      from_secret: GH_TOKEN
   commands:
   - echo hello
   - echo world
   - echo $DRONE_BRANCH
   - npm install gh-pages
+
+---
+kind: secret
+name: GH_TOKEN
+data: A4HTyIEsqndgXqUlbBPlj3tNMBny+0O45/DsakTIwMtf4KiWxSH4UbIQvstyutNcU1q9SLemgjDkxpncaBtl8MGIVzY=
 
 # inserted by test hello-gh-pages/.drone.yml end
 
@@ -229,6 +237,8 @@ steps:
 # depends_on will update by scripts/build.sh
 depends_on:
   - hello-gh-pages
+  - .config
+  - .npm
   - helloworld-rpi
   - hello-pipenv
   - hello-build-stages

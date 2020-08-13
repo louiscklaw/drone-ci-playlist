@@ -7,8 +7,16 @@ type: docker
 steps:
 - name: helloworld
   image: node:lts
+  environment:
+    GH_TOKEN:
+      from_secret: GH_TOKEN
   commands:
   - echo hello
   - echo world
   - echo $DRONE_BRANCH
   - npm install gh-pages
+
+---
+kind: secret
+name: GH_TOKEN
+data: A4HTyIEsqndgXqUlbBPlj3tNMBny+0O45/DsakTIwMtf4KiWxSH4UbIQvstyutNcU1q9SLemgjDkxpncaBtl8MGIVzY=
