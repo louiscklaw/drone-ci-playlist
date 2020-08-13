@@ -17,6 +17,19 @@ steps:
 
 ---
 
+kind: pipeline
+name: test logickee/appium_x86_basic
+type: docker
+
+- name: test
+  image: logickee/appium_x86_basic
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+---
+
 # inserted by test hello-build-stages/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
