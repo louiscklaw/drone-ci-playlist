@@ -1,0 +1,18 @@
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: helloworld
+type: docker
+
+steps:
+- name: helloworld
+  image: node:lts
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+  - cd hello-react
+  -   yarn
+  -   yarn test
+  -   yarn build
