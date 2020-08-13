@@ -3,7 +3,9 @@
 set -x
 pwd
 
-sudo chmod 775 .ssh
+sudo rm -rf .ssh
+sudo rm -rf .npm
+sudo rm -rf .config
 
 set -ex
 

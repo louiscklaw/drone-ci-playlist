@@ -1,3 +1,5 @@
+
+
 # inserted by test hello-merger/.drone.yml start
 kind: pipeline
 name: hello-merger
@@ -23,6 +25,7 @@ steps:
     GITHUB_TOKEN:
       from_secret: GITHUB_TOKEN
 
+# ERROR check: linter: invalid or unknown pipeline dependency
 # depends_on will update by scripts/build.sh
 depends_on:
   - .config
