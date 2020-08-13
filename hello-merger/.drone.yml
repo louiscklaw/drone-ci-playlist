@@ -1,6 +1,6 @@
 kind: pipeline
-type: docker
 name: hello-merger
+type: docker
 
 steps:
 - name: hello-merger
@@ -21,6 +21,20 @@ steps:
   environment:
     GITHUB_TOKEN:
       from_secret: GITHUB_TOKEN
+
+# depends_on will update by scripts/build.sh
+depends_on:
+<depends_on>
+
+
+
+trigger:
+  status:
+  - success
+  branch:
+  - develop
+  - test/*
+
 
 ---
 kind: secret

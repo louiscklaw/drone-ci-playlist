@@ -1,7 +1,155 @@
+# inserted by test hello-failure/.drone.yml start
+kind: pipeline
+name: hello-failure
+type: docker
+
+steps:
+- name: hello_failure
+  failure: ignore
+  image: ubuntu
+  commands:
+  - ./hello-failure/fail.sh
+
+# inserted by test hello-failure/.drone.yml end
+
+---
+
+# inserted by test hello-nodejs/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: hello-nodejs
+type: docker
+
+steps:
+- name: helloworld
+  image: node:lts
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+# inserted by test hello-nodejs/.drone.yml end
+
+---
+
+# inserted by test hello-pipenv/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: hello-pipenv
+type: docker
+
+steps:
+- name: helloworld
+  image: logickee/ubuntu-basic:latest
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+  - apt-get update
+  - apt-get install -y git
+  - apt-get install -y python3 python3-pip
+  - apt-get install -y entr rsync
+  - python3 -m pip install pipenv
+  - cd hello-pipenv
+  -   pipenv sync
+  -   pipenv run python3 main.py
+  - cd -
+# inserted by test hello-pipenv/.drone.yml end
+
+---
+
+# inserted by test hello-secrets/.drone.yml start
+
+kind: pipeline
+name: hello-secrets
+
+steps:
+- name: build
+  image: ubuntu
+  environment:
+    HELLO:
+      from_secret: hello
+
+  commands:
+  - echo $HELLO
+
+---
+kind: secret
+name: hello
+data: fRBBQR1N0FejBRMwbnYCrzDDqKQLvYLcPmKmXSxoUIcv
+
+# inserted by test hello-secrets/.drone.yml end
+
+---
+
+# inserted by test hello-slack/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: hello-slack
+type: docker
+
+steps:
+- name: notify
+  image: plugins/slack
+  settings:
+    webhook:
+      from_secret: webhook
+
+
+---
+kind: secret
+name: webhook
+data: Bpoft0irrMGM2Kdco5Fc3lnLhO/JkoaZvQMr4qG2N4ZVVn9v2IY5n+wQ31lhup2Ew0rhCfSuz0Y+oO+kI5wOvV1VF48C4r8l3Hd4TNkTGPCoCWwNuAlA+S0t8Nwe+L3y4cRvzJoRNnrdGCk=
+
+# inserted by test hello-slack/.drone.yml end
+
+---
+
+# inserted by test helloworld/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: helloworld
+type: docker
+
+steps:
+- name: helloworld
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+# inserted by test helloworld/.drone.yml end
+
+---
+
+# inserted by test helloworld-rpi/.drone.yml start
+kind: pipeline
+name: helloworld-rpi
+type: docker
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+- name: helloworld
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+
+# inserted by test helloworld-rpi/.drone.yml end
+
+---
+
 # inserted by test hello-merger/.drone.yml start
 kind: pipeline
-type: docker
 name: hello-merger
+type: docker
 
 steps:
 - name: hello-merger
@@ -23,145 +171,29 @@ steps:
     GITHUB_TOKEN:
       from_secret: GITHUB_TOKEN
 
+# depends_on will update by scripts/build.sh
+depends_on:
+  - helloworld
+  - helloworld-rpi
+  - hello-slack
+  - hello-pipenv
+  - hello-failure
+  - hello-secrets
+  - hello-nodejs
+
+
+
+trigger:
+  status:
+  - success
+  branch:
+  - develop
+  - test/*
+
+
 ---
 kind: secret
-name: hello-merger
+name: GITHUB_TOKEN
 data: KahdXW1UO0TePy8Fh5BQ0ghArK0X3JYtDP3aQMCyrt9fX0gYLWv8Qp1p4f4uzXt+mgKWXIQTVuH1RfvX7UwIOxNxWHI=
 
 # inserted by test hello-merger/.drone.yml end
----
-# inserted by test helloworld-rpi/.drone.yml start
-kind: pipeline
-type: docker
-name: helloworld-rpi
-
-platform:
-  os: linux
-  arch: arm
-
-steps:
-- name: helloworld
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
-
-# inserted by test helloworld-rpi/.drone.yml end
----
-# inserted by test hello-pipenv/.drone.yml start
-kind: pipeline
-type: docker
-name: hello-pipenv
-
-steps:
-- name: hello-merger
-  image: ubuntu
-  commands:
-  - apt-get update
-  - apt-get install -y python3 python3-pip
-  - python3 -m pip install pipenv
-  - pipenv sync
-# inserted by test hello-pipenv/.drone.yml end
----
-# inserted by test hello-build-stages/.drone.yml start
-# https://docs.drone.io/pipeline/environment/reference/
-
-kind: pipeline
-type: docker
-name: hello-build-stages
-
-steps:
-
-- name: Build
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-
-- name: Test
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-
-- name: Deploy
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-
-# inserted by test hello-build-stages/.drone.yml end
----
-# inserted by test hello_failure/.drone.yml start
-
-kind: pipeline
-type: docker
-name: hello_failure
-
-steps:
-- name: hello_failure
-  failure: ignore
-  image: ubuntu
-  commands:
-  - ./hello_failure/fail.sh
-
-# inserted by test hello_failure/.drone.yml end
----
-# inserted by test hello-nodejs/.drone.yml start
-# https://docs.drone.io/pipeline/environment/reference/
-
-kind: pipeline
-type: docker
-name: hello-nodejs
-
-steps:
-- name: helloworld
-  image: node:lts
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-  - node -v
-  - yarn -v
-# inserted by test hello-nodejs/.drone.yml end
----
-# inserted by test hello-secrets/.drone.yml start
-
-kind: pipeline
-name: hello-secrets
-
-steps:
-- name: build
-  image: ubuntu
-  environment:
-    HELLO:
-      from_secret: hello
-
-  commands:
-  - echo $HELLO
-
----
-kind: secret
-name: hello-secrets
-data: fRBBQR1N0FejBRMwbnYCrzDDqKQLvYLcPmKmXSxoUIcv
-
-# inserted by test hello-secrets/.drone.yml end
----
-# inserted by test helloworld/.drone.yml start
-# https://docs.drone.io/pipeline/environment/reference/
-
-kind: pipeline
-type: docker
-name: helloworld
-
-steps:
-- name: helloworld
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-# inserted by test helloworld/.drone.yml end

@@ -1,0 +1,10 @@
+kind: pipeline
+name: hello_failure
+type: docker
+
+steps:
+- name: hello_failure
+  failure: ignore
+  image: ubuntu
+  commands:
+  - ./hello-failure/fail.sh
