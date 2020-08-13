@@ -111,6 +111,9 @@ type: docker
 steps:
 - name: helloworld
   image: node:lts
+  environment:
+    FIREBASE_TOKEN:
+      from_secret: firebase
   commands:
   - echo hello
   - echo world
@@ -121,7 +124,7 @@ steps:
 
 ---
 kind: secret
-name: hello
+name: firebase
 data: WkHEj0Tv3eHL/xjk5ZxQmR97kA9RL1qNH8j4mhLY2mF53xKxhkvPH2T9wuZN0hewwcHfA1yzH2ysnDu8xVJpKHv7BlRNqJW5JD03uBLfZFhLiJ+Hii+CMCKK7tiaBELnD9XwZccDklZSiuABbR5CoVlwP3q+7E9OB7P2hRzarnc7CPY=
 
 # inserted by test hello-firebase/.drone.yml end
