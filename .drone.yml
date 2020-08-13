@@ -17,6 +17,27 @@ steps:
 
 ---
 
+# inserted by test hello-appium-arm64/.drone.yml start
+kind: pipeline
+name: hello-appium-arm64
+type: docker
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+- name: test
+  image: logickee/appium_arm64
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+# inserted by test hello-appium-arm64/.drone.yml end
+
+---
+
 # inserted by test hello-appium-x86-image/.drone.yml start
 kind: pipeline
 name: hello-appium-x86-image
@@ -48,27 +69,6 @@ steps:
   - echo $DRONE_BRANCH
 
 # inserted by test hello-appium-x86-image-with-options/.drone.yml end
-
----
-
-# inserted by test hello-appium_arm64/.drone.yml start
-kind: pipeline
-name: hello-appium_arm64
-type: docker
-
-platform:
-  os: linux
-  arch: arm
-
-steps:
-- name: test
-  image: logickee/appium_arm64
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-
-# inserted by test hello-appium_arm64/.drone.yml end
 
 ---
 
@@ -389,9 +389,9 @@ steps:
 # depends_on will update by scripts/build.sh
 depends_on:
   - hello-appium
+  - hello-appium-arm64
   - hello-appium-x86-image
   - hello-appium-x86-image-with-options
-  - hello-appium_arm64
   - hello-build-stages
   - hello-failure
   - hello-firebase
