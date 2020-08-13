@@ -39,4 +39,4 @@ trigger:
 ---
 kind: secret
 name: GITHUB_TOKEN
-data: q0ipZvVFgJKLn9vMxZFOLK5s5JpgD/WbOO79Nt2UT14i9VUiVkJOleDNYnRbgoLt/2oazT0pEbQkECgfG9hG4iQRH3A=
+data: bzDZQ+2HFTzRwXkVM8MmstspQh0rNwkvU+x5IPacewYSIVGe6oewX/4JAJW3i7dJ9T6c4Ea+8zM1NvCc95sbR3qrkH4=
