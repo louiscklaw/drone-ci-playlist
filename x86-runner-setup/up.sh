@@ -11,9 +11,9 @@ set -ex
 docker run -d \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -e DRONE_RPC_PROTO=http \
-  -e DRONE_RPC_HOST=home.louislabs.com:52101 \
+  -e DRONE_RPC_HOST=878009481f52.ngrok.io \
   -e DRONE_RPC_SECRET=$DRONE_RPC_SECRET \
-  -e DRONE_RUNNER_CAPACITY=1 \
+  -e DRONE_RUNNER_CAPACITY=3 \
   -e DRONE_RUNNER_NAME=${HOSTNAME} \
   -e DRONE_LOGS_TRACE=true \
   -p 3000:3000 \
