@@ -1,7 +1,7 @@
 # https://docs.drone.io/pipeline/environment/reference/
 
 kind: pipeline
-name: helloworld
+name: test logickee/appium_arm64
 type: docker
 
 platform:
@@ -10,7 +10,7 @@ platform:
 
 steps:
 
-- name: test logickee/appium_arm64
+- name: test
   image: logickee/appium_arm64
   commands:
   - echo hello
@@ -20,14 +20,14 @@ steps:
 ---
 
 kind: pipeline
-name: helloworld
+name: test logickee/raspberry-appium
 type: docker
 
 platform:
   os: linux
   arch: arm
 
-- name: test logickee/raspberry-appium
+- name: test
   image: logickee/raspberry-appium
   commands:
   - echo hello

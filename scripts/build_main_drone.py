@@ -52,7 +52,7 @@ def replacePipelineName(content_in, pipeline_name):
   # print(list(map(lambda x: re.sub('name: hello-merger','name: 123',x), content_in)))
   # after_process = list(map(lambda x: re.sub('^name: [\w|\d|-]+$','name: '+pipeline_name,x), content_in))
 
-  text_to_search = 'kind: pipeline\nname: [\d|\w|-]+\n'
+  text_to_search = 'kind: pipeline\nname: [\/|\s|\d|\w|-]+\n'
   text_to_replace = 'kind: pipeline\nname: {}\n'.format(pipeline_name)
 
   m = re.search(text_to_search, content_in)
@@ -82,30 +82,32 @@ def main():
   for dirname in project_dirs:
     try:
       drone_file = dirname+'/'+'.drone.yml'
-      pipeline_name = os.path.dirname(drone_file)
-
       drone_file_arm = dirname+'/'+'.drone.yml.arm'
 
+      # pipeline_name = os.path.dirname(drone_file)
+
       if checkFileExist(drone_file_arm):
+        pipeline_name = os.path.dirname(drone_file_arm)
         temp = ''
 
         if dirname == 'hello-merger':
           temp = updateDependsOn(
-            replacePipelineName(openProjectDroneYml(drone_file), pipeline_name)
+            replacePipelineName(openProjectDroneYml(drone_file_arm), pipeline_name)
           )
 
         else:
-          temp = replacePipelineName(openProjectDroneYml(drone_file), pipeline_name)
+          temp = replacePipelineName(openProjectDroneYml(drone_file_arm), pipeline_name)
 
         drone_yml_content = '\n'.join([
-          '# inserted by test {} start'.format(drone_file),
+          '# inserted by test {} start'.format(drone_file_arm),
           temp,
-          '# inserted by test {} end'.format(drone_file),
+          '# inserted by test {} end'.format(drone_file_arm),
         ])
 
         main_drone_yml_list.append(drone_yml_content)
 
       if checkFileExist(drone_file):
+        pipeline_name = os.path.dirname(drone_file)
         temp = ''
 
         if dirname == 'hello-merger':
