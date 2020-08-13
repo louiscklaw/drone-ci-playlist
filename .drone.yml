@@ -169,15 +169,15 @@ steps:
     GITHUB_TOKEN:
       from_secret: GITHUB_TOKEN
 
-  # depends_on will update by scripts/build.sh
-  depends_on:
-    - helloworld
-    - helloworld-rpi
-    - hello-slack
-    - hello-pipenv
-    - hello-failure
-    - hello-secrets
-    - hello-nodejs
+# depends_on will update by scripts/build.sh
+depends_on:
+  - helloworld
+  - helloworld-rpi
+  - hello-slack
+  - hello-pipenv
+  - hello-failure
+  - hello-secrets
+  - hello-nodejs
 
 
 
