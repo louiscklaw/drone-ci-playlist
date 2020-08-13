@@ -15,7 +15,8 @@ steps:
   - echo world
   - echo $DRONE_BRANCH
   - npm install -g firebase-tools firebase-functions firebase-admin
-  - firebase deploy --token $FIREBASE_TOKEN --non-interactive
+  - cd hello-firebase
+  -   firebase deploy --token $FIREBASE_TOKEN --non-interactive
 
 
 ---
