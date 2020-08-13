@@ -1,3 +1,37 @@
+# inserted by test hello-build-stages/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: hello-build-stages
+type: docker
+
+steps:
+
+- name: Build
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+- name: Test
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+- name: Deploy
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+# inserted by test hello-build-stages/.drone.yml end
+
+---
+
 # inserted by test hello-failure/.drone.yml start
 kind: pipeline
 name: hello-failure
@@ -56,6 +90,7 @@ steps:
   -   pipenv sync
   -   pipenv run python3 main.py
   - cd -
+
 # inserted by test hello-pipenv/.drone.yml end
 
 ---
@@ -173,13 +208,17 @@ steps:
 
 # depends_on will update by scripts/build.sh
 depends_on:
-  - helloworld
+  - .cache
+  - .ssh
   - helloworld-rpi
-  - hello-slack
+  - node_modules
   - hello-pipenv
-  - hello-failure
-  - hello-secrets
+  - hello-build-stages
+  - hello-slack
   - hello-nodejs
+  - hello-secrets
+  - helloworld
+  - hello-failure
 
 
 
