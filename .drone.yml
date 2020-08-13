@@ -13,6 +13,20 @@ steps:
   - echo world
   - echo $DRONE_BRANCH
 
+---
+
+kind: pipeline
+name: hello-appium1
+type: docker
+
+steps:
+- name: test
+  image: appium/appium
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
 # inserted by test hello-appium/.drone.yml end
 
 ---
