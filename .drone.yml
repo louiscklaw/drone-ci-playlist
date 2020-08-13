@@ -207,6 +207,27 @@ data: jsiRimOeYe7wYVsxd2i842cuCKoX7yChzojECHEcbBV5lx8Abx7H5vr0f4UfkB8uB60p6rIbl+
 
 ---
 
+# inserted by test hello-logickee-raspberry-appium/.drone.yml start
+kind: pipeline
+name: hello-logickee-raspberry-appium
+type: docker
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+- name: test
+  image: logickee/raspberry-appium
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+# inserted by test hello-logickee-raspberry-appium/.drone.yml end
+
+---
+
 # inserted by test hello-nodejs/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -376,6 +397,7 @@ depends_on:
   - hello-firebase
   - hello-gatsby
   - hello-gh-pages
+  - hello-logickee-raspberry-appium
   - hello-nodejs
   - hello-pipenv
   - hello-react
