@@ -17,5 +17,7 @@ SKIP_LIST=[
   'node_modules',
   'scripts',
   'x86-runner-setup',
-  'check-leak'
+  'check-leak',
+  '.config',
+  '.npm'
   ]

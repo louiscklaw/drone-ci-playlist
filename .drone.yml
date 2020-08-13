@@ -239,8 +239,6 @@ steps:
 # depends_on will update by scripts/build.sh
 depends_on:
   - hello-gh-pages
-  - .config
-  - .npm
   - helloworld-rpi
   - hello-pipenv
   - hello-build-stages
