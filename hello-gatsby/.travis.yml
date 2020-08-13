@@ -1,0 +1,11 @@
+jobs:
+  include:
+    - stage: Unit_test
+      name: test (gatsby-helloworld)
+      before_script:
+        - npm install -g gatsby-cli
+      script:
+        - cd gatsby-helloworld
+        -   yarn
+        -   yarn build
+        - cd ..
