@@ -6,7 +6,7 @@ type: docker
 
 steps:
 - name: helloworld
-  image: node:lts
+  image: alpine
   commands:
   - echo hello
   - echo world

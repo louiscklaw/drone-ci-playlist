@@ -57,12 +57,11 @@ type: docker
 
 steps:
 - name: helloworld
-  image: node:lts
+  image: alpine
   commands:
   - echo hello
   - echo world
   - echo $DRONE_BRANCH
-
 # inserted by test hello-gh-pages/.drone.yml end
 
 ---
