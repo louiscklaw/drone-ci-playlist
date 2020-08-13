@@ -42,7 +42,7 @@ type: docker
 
 steps:
 - name: helloworld
-  image: ubuntu:latest
+  image: logickee/ubuntu-basic:latest
   commands:
   - echo hello
   - echo world
@@ -52,8 +52,10 @@ steps:
   - apt-get install -y python3 python3-pip
   - apt-get install -y entr rsync
   - python3 -m pip install pipenv
-  - pipenv sync
-  - pipenv run python3 main.py
+  - cd hello-pipenv
+  -   pipenv sync
+  -   pipenv run python3 main.py
+  - cd -
 # inserted by test hello-pipenv/.drone.yml end
 
 ---
