@@ -1,4 +1,3 @@
-
 # inserted by test hello-merger/.drone.yml start
 kind: pipeline
 name: hello-merger
