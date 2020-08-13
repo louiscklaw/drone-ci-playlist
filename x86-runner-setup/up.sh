@@ -15,7 +15,7 @@ docker run -d \
   -e DRONE_RPC_PROTO=http \
   -e DRONE_RPC_HOST=home.louislabs.com:52101 \
   -e DRONE_RPC_SECRET=$DRONE_RPC_SECRET \
-  -e DRONE_RUNNER_CAPACITY=20 \
+  -e DRONE_RUNNER_CAPACITY=$@ \
   -e DRONE_RUNNER_NAME=${HOSTNAME} \
   -e DRONE_LOGS_TRACE=true \
   -p 3000:3000 \
