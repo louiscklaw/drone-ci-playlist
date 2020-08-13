@@ -22,10 +22,10 @@ steps:
     GITHUB_TOKEN:
       from_secret: GITHUB_TOKEN
 
+# ERROR_CHECK: linter: invalid or unknown pipeline dependency
 # depends_on will update by scripts/build.sh
 depends_on:
 <depends_on>
-
 
 
 trigger:
