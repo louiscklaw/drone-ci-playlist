@@ -16,7 +16,7 @@ steps:
 ---
 
 kind: pipeline
-name: hello-appium1
+name: test-appium-x86-image
 type: docker
 
 steps:
