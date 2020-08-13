@@ -267,7 +267,7 @@ steps:
 ---
 kind: secret
 name: webhook
-data: KtUfQwzP1QzNwHYVaBn4YnIVhTEJA8P4WH1/ukejWTRolXmsz7ECre2m4yiAqQkYsNes+Cn4pgtGR0SLVcgEQJhrxnRDcHY34U5cQec3bCOBR1dYkj+9xS9JXIKRvO10Ni8p9nEQbBIuJjg=
+data: UG4xdy6hgIXNHj5c/DEXZUBALxgF9A6+UCsXhz5AeFkZO9TYKWyMVoYIcBQvTOnODdQYxpyUjLr3MXx8dmA3FPs5ohABqytzzpVr3ksYdT0CQ+OVQ9wZSvsxj631vq4CfsO6n7NIW1DWcqw=
 
 # inserted by test hello-slack/.drone.yml end
 
