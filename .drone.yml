@@ -110,11 +110,14 @@ type: docker
 
 steps:
 - name: helloworld
-  image: alpine
+  image: node:lts
   commands:
   - echo hello
   - echo world
   - echo $DRONE_BRANCH
+  - npm install -g firebase-tools firebase-functions firebase-admin
+  - node scripts/update_build_info.js
+  - scripts/all_deploy.sh
 # inserted by test hello-firebase/.drone.yml end
 
 ---
@@ -367,6 +370,6 @@ trigger:
 ---
 kind: secret
 name: GITHUB_TOKEN
-data: KahdXW1UO0TePy8Fh5BQ0ghArK0X3JYtDP3aQMCyrt9fX0gYLWv8Qp1p4f4uzXt+mgKWXIQTVuH1RfvX7UwIOxNxWHI=
+data: q0ipZvVFgJKLn9vMxZFOLK5s5JpgD/WbOO79Nt2UT14i9VUiVkJOleDNYnRbgoLt/2oazT0pEbQkECgfG9hG4iQRH3A=
 
 # inserted by test hello-merger/.drone.yml end
