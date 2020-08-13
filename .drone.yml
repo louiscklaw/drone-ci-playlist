@@ -208,10 +208,7 @@ steps:
 
 # depends_on will update by scripts/build.sh
 depends_on:
-  - .cache
-  - .ssh
   - helloworld-rpi
-  - node_modules
   - hello-pipenv
   - hello-build-stages
   - hello-slack

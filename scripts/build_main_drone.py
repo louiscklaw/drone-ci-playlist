@@ -8,6 +8,7 @@ import traceback
 from pprint import pprint
 from subprocess import Popen, check_output
 
+from config import *
 from update_merger_yml import *
 
 drone_pipeline_seperator='''
