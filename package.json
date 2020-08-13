@@ -1,7 +1,7 @@
 {
   "name": "drone-ci-playlist",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://docs.drone.io/pipeline/docker/examples/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,13 +18,13 @@
   },
   "homepage": "https://github.com/louiscklaw/drone-ci-playlist#readme",
   "dependencies": {
+    "gh-pages": "^3.1.0",
     "husky": "^4.2.5"
   },
-
   "husky": {
     "hooks": {
       "pre-commit": "scripts/build_main_drone.sh"
     }
-  }
-
+  },
+  "devDependencies": {}
 }

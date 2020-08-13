@@ -21,7 +21,7 @@ CWD = os.getcwd()
 SCAN_DIR = CWD if len(sys.argv) < 2 else sys.argv[1]
 
 SKIP_LIST=[
-  'logickee','1'
+  'logickee','1','http://home.louislabs.com:52101'
 ]
 
 DIR_SKIP_LIST=[

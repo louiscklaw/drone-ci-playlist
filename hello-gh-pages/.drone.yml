@@ -7,8 +7,18 @@ type: docker
 steps:
 - name: helloworld
   image: node:lts
+  environment:
+    GH_TOKEN:
+      from_secret: GH_TOKEN
   commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-  - npm install gh-pages
+  - git clone http://louiscklaw:${GH_TOKEN}@github.com/louiscklaw/drone-ci-playlist /tmp/drone-ci-playlist
+
+  - cd /tmp/drone-ci-playlist
+  -   cd hello-gh-pages
+  -     npm install gh-pages -g
+  -     gh-pages -d public -b gh-pages
+
+---
+kind: secret
+name: GH_TOKEN
+data: A4HTyIEsqndgXqUlbBPlj3tNMBny+0O45/DsakTIwMtf4KiWxSH4UbIQvstyutNcU1q9SLemgjDkxpncaBtl8MGIVzY=
