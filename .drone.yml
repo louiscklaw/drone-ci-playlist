@@ -48,6 +48,29 @@ steps:
 
 ---
 
+# inserted by test hello-gatsby/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: hello-gatsby
+type: docker
+
+steps:
+- name: helloworld
+  image: node:lts
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+  - cd hello-gatsby
+  -   yarn
+  -   yarn build
+
+# inserted by test hello-gatsby/.drone.yml end
+
+---
+
 # inserted by test hello-gh-pages/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -263,6 +286,7 @@ steps:
 
 # depends_on will update by scripts/build.sh
 depends_on:
+  - hello-gatsby
   - hello-gh-pages
   - hello-react
   - helloworld-rpi
