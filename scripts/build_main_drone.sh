@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-set -ex
-
-
+set -x
 pwd
 
 sudo chmod 775 .ssh
+
+set -ex
 
 python3 check-leak/main.py
 

@@ -1,32 +1,18 @@
-# https://docs.drone.io/pipeline/environment/reference/
 
 kind: pipeline
-name: helloworld
-type: docker
+name: hello-secrets
 
 steps:
-- name: helloworld
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
+- name: build
+  image: ubuntu
+  environment:
+    HELLO:
+      from_secret: hello
 
-- name: publish
-  image: plugins/gh-pages
-  settings:
-    username:
-      from_secret: github_u
-    password:
-      from_secret: github_p
-    pages_directory: hello-gh-pages/public/
+  commands:
+  - echo $HELLO
 
 ---
-
 kind: secret
-name: github_u
-data: 0+6dJTLwzNI/Ao/rcqQLeDm+1KVusQoksZdZ/WKtwpDOZJ/inkI=
-
-kind: secret
-name: github_p
-data: vUJejxoMXAulCSm+QrpzNNRGqreHZOIxAXFuSV6IOh4pak0C1JMKOSG0Jiw=
+name: hello
+data: fRBBQR1N0FejBRMwbnYCrzDDqKQLvYLcPmKmXSxoUIcv
