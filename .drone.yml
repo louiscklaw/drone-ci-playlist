@@ -33,6 +33,7 @@ kind: pipeline
 name: test-appium-x86-image-with-options
 type: docker
 
+steps:
 - name: test
   image: logickee/appium_x86_plus_optional
   commands:
