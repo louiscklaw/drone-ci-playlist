@@ -271,7 +271,7 @@ data: fRBBQR1N0FejBRMwbnYCrzDDqKQLvYLcPmKmXSxoUIcv
 
 # inserted by test hello-slack/.drone.yml end
 
----
+# ---
 
 # inserted by test helloworld/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
