@@ -1,3 +1,22 @@
+# inserted by test hello-appium/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: hello-appium
+type: docker
+
+steps:
+- name: helloworld
+  image: appium/appium
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+# inserted by test hello-appium/.drone.yml end
+
+---
+
 # inserted by test hello-build-stages/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -290,6 +309,7 @@ depends_on:
   - hello-gatsby
   - hello-gh-pages
   - hello-react
+  - hello-appium
   - helloworld-rpi
   - hello-pipenv
   - hello-build-stages

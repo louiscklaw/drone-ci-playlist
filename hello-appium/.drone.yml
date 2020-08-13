@@ -1,0 +1,13 @@
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: helloworld
+type: docker
+
+steps:
+- name: helloworld
+  image: appium/appium
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH

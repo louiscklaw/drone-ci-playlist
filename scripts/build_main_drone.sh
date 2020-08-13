@@ -8,7 +8,7 @@ sudo rm -rf .config
 
 set -ex
 
-python3 check-leak/main.py
+script/check_leak.sh
 
 python3 scripts/build_main_drone.py
 sleep 0.5

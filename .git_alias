@@ -6,9 +6,15 @@ echo 'use regenCommit <commit_msg> to regen main drone.yml and commit'
 echo ''
 echo '----------------------------------------'
 
+regenMainDroneYml(){
+  cd /home/logic/_workspace/drone-ci-playlist
+    scripts/build_main_drone.sh
+  cd -
+}
+
 regenCommit(){
   cd /home/logic/_workspace/drone-ci-playlist
-    scripts/build_main_drone.sh && git add .drone.yml
+    regenMainDroneYml && sleep 0.1 && git add .drone.yml
     git commit -m$@
   cd -
 }
