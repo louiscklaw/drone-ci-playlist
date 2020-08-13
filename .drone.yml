@@ -18,7 +18,7 @@ steps:
 ---
 
 kind: pipeline
-name: test logickee-appium_x86_basic
+name: test-logickee-appium_x86_basic
 type: docker
 
 - name: test
@@ -31,7 +31,7 @@ type: docker
 ---
 
 kind: pipeline
-name: test logickee-appium_x86_plus_optional
+name: test-logickee-appium_x86_plus_optional
 type: docker
 
 - name: test
