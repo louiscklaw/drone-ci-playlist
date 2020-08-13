@@ -6,8 +6,11 @@ type: docker
 
 steps:
 - name: helloworld
-  image: alpine
+  image: node:lts
   commands:
   - echo hello
   - echo world
   - echo $DRONE_BRANCH
+  - npm install -g firebase-tools firebase-functions firebase-admin
+  - node scripts/update_build_info.js
+  - scripts/all_deploy.sh
