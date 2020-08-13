@@ -63,11 +63,6 @@ steps:
   - echo world
   - echo $DRONE_BRANCH
 
----
-kind: secret
-name: GH_TOKEN
-data: A4HTyIEsqndgXqUlbBPlj3tNMBny+0O45/DsakTIwMtf4KiWxSH4UbIQvstyutNcU1q9SLemgjDkxpncaBtl8MGIVzY=
-
 # inserted by test hello-gh-pages/.drone.yml end
 
 ---
