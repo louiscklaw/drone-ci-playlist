@@ -11,12 +11,12 @@ steps:
     GH_TOKEN:
       from_secret: GH_TOKEN
   commands:
-  - git clone http://louiscklaw:${GH_TOKEN}@github.com/louiscklaw/drone-ci-playlist /tmp/drone-ci-playlist
+    - git clone http://louiscklaw:${GH_TOKEN}@github.com/louiscklaw/drone-ci-playlist /tmp/drone-ci-playlist
 
-  - cd /tmp/drone-ci-playlist
-  -   cd hello-gh-pages
-  -     npm install gh-pages -g
-  -     gh-pages -d public -b gh-pages
+    - cd /tmp/drone-ci-playlist
+    -   cd hello-gh-pages
+    -     npm install gh-pages -g
+    -     gh-pages -d public -b gh-pages
 
 ---
 kind: secret
