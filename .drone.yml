@@ -21,7 +21,7 @@ type: docker
 
 steps:
 - name: test
-  image: appium/appium
+  image: logickee/appium_x86_basic
   commands:
   - echo hello
   - echo world
