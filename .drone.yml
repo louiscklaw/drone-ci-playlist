@@ -62,7 +62,6 @@ steps:
   - echo hello
   - echo world
   - echo $DRONE_BRANCH
-  - npm install gh-pages
 
 # inserted by test hello-gh-pages/.drone.yml end
 
