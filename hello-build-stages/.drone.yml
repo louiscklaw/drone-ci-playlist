@@ -1,0 +1,28 @@
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+type: docker
+name: helloworld
+
+steps:
+
+- name: Build
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+- name: Test
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+- name: Deploy
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
