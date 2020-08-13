@@ -6,7 +6,7 @@ type: docker
 
 steps:
 - name: helloworld
-  image: ubuntu:latest
+  image: logickee/ubuntu-basic:latest
   commands:
   - echo hello
   - echo world
