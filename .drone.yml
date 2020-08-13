@@ -327,7 +327,7 @@ depends_on:
   # - helloworld-rpi
   - hello-pipenv
   - hello-build-stages
-  - hello-slack
+  # - hello-slack
   - hello-nodejs
   # - hello-logickee-raspberry-appium
   - hello-secrets
