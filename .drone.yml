@@ -319,6 +319,26 @@ steps:
 
 ---
 
+# inserted by test helloworld-rpi/.drone.yml start
+kind: pipeline
+name: helloworld-rpi
+type: docker
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+- name: helloworld
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+
+# inserted by test helloworld-rpi/.drone.yml end
+
+---
+
 # inserted by test hello-merger/.drone.yml start
 kind: pipeline
 name: hello-merger
@@ -361,6 +381,7 @@ depends_on:
   - hello-react
   - hello-secrets
   - helloworld
+  - helloworld-rpi
 
 
 trigger:
