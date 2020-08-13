@@ -52,7 +52,7 @@ def replacePipelineName(content_in, pipeline_name):
   # print(list(map(lambda x: re.sub('name: hello-merger','name: 123',x), content_in)))
   # after_process = list(map(lambda x: re.sub('^name: [\w|\d|-]+$','name: '+pipeline_name,x), content_in))
 
-  text_to_search = 'kind: pipeline\nname: [\/|\s|\d|\w|-]+\n'
+  text_to_search = 'kind: pipeline\nname: [\s|\d|\w|-]+\n'
   text_to_replace = 'kind: pipeline\nname: {}\n'.format(pipeline_name)
 
   m = re.search(text_to_search, content_in)
