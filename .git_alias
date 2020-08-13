@@ -7,6 +7,8 @@ echo ''
 echo '----------------------------------------'
 
 regenCommit(){
-  scripts/build_main_drone.sh && git add .drone.yml
-  git commit -m$@ .
+  cd /home/logic/_workspace/drone-ci-playlist
+    scripts/build_main_drone.sh && git add .drone.yml
+    git commit -m$@ .
+  cd -
 }

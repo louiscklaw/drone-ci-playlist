@@ -65,6 +65,7 @@ steps:
     - git clone http://louiscklaw:$GH_TOKEN@github.com/louiscklaw/drone-ci-playlist /tmp/drone-ci-playlist
 
     - cd /tmp/drone-ci-playlist
+    - git checkout $DRONE_BRANCH
     -   cd hello-gh-pages
     -     npm install gh-pages -g
     -     gh-pages -d public -b gh-pages
@@ -122,6 +123,30 @@ steps:
   - cd -
 
 # inserted by test hello-pipenv/.drone.yml end
+
+---
+
+# inserted by test hello-react/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: hello-react
+type: docker
+
+steps:
+- name: helloworld
+  image: node:lts
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+
+  - cd hello-react
+  -   yarn
+  -   yarn test
+  -   yarn build
+
+# inserted by test hello-react/.drone.yml end
 
 ---
 
@@ -239,6 +264,7 @@ steps:
 # depends_on will update by scripts/build.sh
 depends_on:
   - hello-gh-pages
+  - hello-react
   - helloworld-rpi
   - hello-pipenv
   - hello-build-stages
