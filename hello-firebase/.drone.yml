@@ -12,5 +12,10 @@ steps:
   - echo world
   - echo $DRONE_BRANCH
   - npm install -g firebase-tools firebase-functions firebase-admin
-  - node scripts/update_build_info.js
-  - scripts/all_deploy.sh
+  - firebase deploy --token $FIREBASE_TOKEN --non-interactive
+
+
+---
+kind: secret
+name: hello
+data: WkHEj0Tv3eHL/xjk5ZxQmR97kA9RL1qNH8j4mhLY2mF53xKxhkvPH2T9wuZN0hewwcHfA1yzH2ysnDu8xVJpKHv7BlRNqJW5JD03uBLfZFhLiJ+Hii+CMCKK7tiaBELnD9XwZccDklZSiuABbR5CoVlwP3q+7E9OB7P2hRzarnc7CPY=

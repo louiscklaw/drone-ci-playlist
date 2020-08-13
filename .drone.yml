@@ -116,8 +116,14 @@ steps:
   - echo world
   - echo $DRONE_BRANCH
   - npm install -g firebase-tools firebase-functions firebase-admin
-  - node scripts/update_build_info.js
-  - scripts/all_deploy.sh
+  - firebase deploy --token $FIREBASE_TOKEN --non-interactive
+
+
+---
+kind: secret
+name: hello
+data: WkHEj0Tv3eHL/xjk5ZxQmR97kA9RL1qNH8j4mhLY2mF53xKxhkvPH2T9wuZN0hewwcHfA1yzH2ysnDu8xVJpKHv7BlRNqJW5JD03uBLfZFhLiJ+Hii+CMCKK7tiaBELnD9XwZccDklZSiuABbR5CoVlwP3q+7E9OB7P2hRzarnc7CPY=
+
 # inserted by test hello-firebase/.drone.yml end
 
 ---
@@ -170,7 +176,7 @@ steps:
 ---
 kind: secret
 name: gh_token
-data: A4HTyIEsqndgXqUlbBPlj3tNMBny+0O45/DsakTIwMtf4KiWxSH4UbIQvstyutNcU1q9SLemgjDkxpncaBtl8MGIVzY=
+data: jsiRimOeYe7wYVsxd2i842cuCKoX7yChzojECHEcbBV5lx8Abx7H5vr0f4UfkB8uB60p6rIbl+KqOj5LCcpY2nLCeDU=
 
 # inserted by test hello-gh-pages/.drone.yml end
 
@@ -321,6 +327,7 @@ depends_on:
   - hello-appium-x86-image-with-options
   - hello-build-stages
   - hello-failure
+  - hello-firebase
   - hello-gatsby
   - hello-gh-pages
   - hello-nodejs
@@ -342,4 +349,5 @@ trigger:
 kind: secret
 name: GITHUB_TOKEN
 data: bzDZQ+2HFTzRwXkVM8MmstspQh0rNwkvU+x5IPacewYSIVGe6oewX/4JAJW3i7dJ9T6c4Ea+8zM1NvCc95sbR3qrkH4=
+
 # inserted by test hello-merger/.drone.yml end
