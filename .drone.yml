@@ -48,24 +48,6 @@ steps:
 
 ---
 
-# inserted by test hello-gh-pages/.drone.yml start
-# https://docs.drone.io/pipeline/environment/reference/
-
-kind: pipeline
-name: hello-gh-pages
-type: docker
-
-steps:
-- name: helloworld
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-# inserted by test hello-gh-pages/.drone.yml end
-
----
-
 # inserted by test hello-nodejs/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -226,7 +208,6 @@ steps:
 
 # depends_on will update by scripts/build.sh
 depends_on:
-  - hello-gh-pages
   - .config
   - .npm
   - helloworld-rpi
