@@ -101,6 +101,24 @@ steps:
 
 ---
 
+# inserted by test hello-firebase/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: hello-firebase
+type: docker
+
+steps:
+- name: helloworld
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+# inserted by test hello-firebase/.drone.yml end
+
+---
+
 # inserted by test hello-gatsby/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -149,7 +167,7 @@ steps:
 ---
 kind: secret
 name: gh_token
-data: jsiRimOeYe7wYVsxd2i842cuCKoX7yChzojECHEcbBV5lx8Abx7H5vr0f4UfkB8uB60p6rIbl+KqOj5LCcpY2nLCeDU=
+data: A4HTyIEsqndgXqUlbBPlj3tNMBny+0O45/DsakTIwMtf4KiWxSH4UbIQvstyutNcU1q9SLemgjDkxpncaBtl8MGIVzY=
 
 # inserted by test hello-gh-pages/.drone.yml end
 
@@ -252,26 +270,26 @@ data: fRBBQR1N0FejBRMwbnYCrzDDqKQLvYLcPmKmXSxoUIcv
 # inserted by test hello-slack/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
-# kind: pipeline
-# name: hello-slack
-# type: docker
+kind: pipeline
+name: hello-slack
+type: docker
 
-# steps:
-# - name: notify
-#   image: plugins/slack
-#   settings:
-#     webhook:
-#       from_secret: webhook
+steps:
+- name: notify
+  image: plugins/slack
+  settings:
+    webhook:
+      from_secret: webhook
 
 
-# ---
-# kind: secret
-# name: webhook
-# data: UG4xdy6hgIXNHj5c/DEXZUBALxgF9A6+UCsXhz5AeFkZO9TYKWyMVoYIcBQvTOnODdQYxpyUjLr3MXx8dmA3FPs5ohABqytzzpVr3ksYdT0CQ+OVQ9wZSvsxj631vq4CfsO6n7NIW1DWcqw=
+---
+kind: secret
+name: webhook
+data: Bpoft0irrMGM2Kdco5Fc3lnLhO/JkoaZvQMr4qG2N4ZVVn9v2IY5n+wQ31lhup2Ew0rhCfSuz0Y+oO+kI5wOvV1VF48C4r8l3Hd4TNkTGPCoCWwNuAlA+S0t8Nwe+L3y4cRvzJoRNnrdGCk=
 
 # inserted by test hello-slack/.drone.yml end
 
-# ---
+---
 
 # inserted by test helloworld/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
@@ -319,22 +337,23 @@ steps:
 # ERROR_CHECK: linter: invalid or unknown pipeline dependency
 # depends_on will update by scripts/build.sh
 depends_on:
-  - hello-gatsby
-  - hello-appium-x86-image
-  - hello-gh-pages
-  - hello-react
-  - hello-appium
-  # - helloworld-rpi
-  - hello-pipenv
+  - hello-appium_arm64
   - hello-build-stages
-  # - hello-slack
-  - hello-nodejs
-  # - hello-logickee-raspberry-appium
-  - hello-secrets
-  # - hello-appium_arm64
+  - hello-appium
   - helloworld
+  - hello-gatsby
+  - helloworld-rpi
+  - hello-slack
+  - hello-pipenv
+  - hello-appium-x86-image
   - hello-failure
+  - hello-react
+  - hello-gh-pages
+  - hello-firebase
   - hello-appium-x86-image-with-options
+  - hello-logickee-raspberry-appium
+  - hello-secrets
+  - hello-nodejs
 
 
 trigger:
@@ -348,6 +367,6 @@ trigger:
 ---
 kind: secret
 name: GITHUB_TOKEN
-data: jsiRimOeYe7wYVsxd2i842cuCKoX7yChzojECHEcbBV5lx8Abx7H5vr0f4UfkB8uB60p6rIbl+KqOj5LCcpY2nLCeDU=
+data: KahdXW1UO0TePy8Fh5BQ0ghArK0X3JYtDP3aQMCyrt9fX0gYLWv8Qp1p4f4uzXt+mgKWXIQTVuH1RfvX7UwIOxNxWHI=
 
 # inserted by test hello-merger/.drone.yml end
