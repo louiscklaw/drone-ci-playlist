@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo 'linting drone.yml files'
+drone fmt /home/logic/_workspace/drone-ci-playlist/hello-docker-build/.drone.yml
+
 echo 'hello pre-push check'
 
 cd /home/logic/_workspace/drone-ci-playlist
