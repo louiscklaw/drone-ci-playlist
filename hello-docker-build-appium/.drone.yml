@@ -7,13 +7,21 @@ type: docker
 steps:
 - name: test hello-docker-build-appium
   image: logickee/ubuntu-docker
+  environment:
+    DEBIAN_FRONTEND: noninteractive
+    DOCKERHUB_USER:
+      from_secret: dockerhub_user
+    DOCKERHUB_PASSWORD:
+      from_secret: dockerhub_password
   volumes:
   - name: docker_socket
     path: /var/run/docker.sock
   commands:
+  - cd hello-docker-build-appium
+  - docker build -t logickee/appium .
   - docker -v
   - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
-  - docker push logickee/ubuntu-docker
+  - docker push logickee/appium
 
 volumes:
 - name: docker_socket
