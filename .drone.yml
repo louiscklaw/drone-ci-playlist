@@ -30,8 +30,11 @@ steps:
   -   docker build -t logickee/ubuntu-docker .
   - cd ..
 
-  - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
-  - docker push logickee/ubuntu-docker
+  - echo $DOCKERHUB_USER
+  - echo $DOCKERHUB_PASSWORD
+
+  # - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
+  # - docker push logickee/ubuntu-docker
 
 
 
