@@ -7,6 +7,11 @@ type: docker
 steps:
 - name: helloworld
   image: ubuntu:18.04
+  environment:
+    DOCKERHUB_USER:
+      from_secret: dockerhub_user
+    DOCKERHUB_PASSWORD:
+      from_secret: dockerhub_password
   volumes:
   - name: docker_socket
     path: /var/run/docker.sock
@@ -20,7 +25,9 @@ steps:
   -   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
   -   add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable"
   -   apt-get install -yq docker-ce
-  -   docker build .
+  -   docker build -t logickee/ubuntu-docker .
+  -   docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
+  -   docker push logickee/ubuntu-docker
   - cd ..
 
 
@@ -29,3 +36,15 @@ volumes:
 - name: docker_socket
   host:
     path: /var/run/docker.sock
+
+
+---
+kind: secret
+name: dockerhub_user
+data: ot4LjMJdZkjghfrqYIgt1oiO3PnRYlTaJG+0TkP+zg1GHI9a
+
+
+---
+kind: secret
+name: dockerhub_password
+data: wsiguwAjyBgzJo7CUC0xPxTFxkW6TWliFsL0RKI0zDPTabwnAsw=
