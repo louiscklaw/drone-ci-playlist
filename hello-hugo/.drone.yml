@@ -5,9 +5,13 @@ name: helloworld
 type: docker
 
 steps:
-- name: helloworld
-  image: alpine
+- name: test hugo-helloworld
+  image: ubuntu:18.04
   commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
+  - cd hello-hugo
+  -   dpkg -i ./hugo_extended_0.74.3_Linux-64bit.deb
+  -
+  -   cd hugo-helloworld
+  -     hugo -D
+  -   cd ..
+  - cd ..

@@ -1,0 +1,31 @@
+jobs:
+  include:
+    - stage: Test
+      name: test (hugo-helloworld)
+
+      install:
+        - sudo dpkg -i ./hugo_extended_0.74.3_Linux-64bit.deb
+
+      script:
+        - cd hugo-helloworld
+        -   hugo -D
+        - cd ..
+
+    - stage: Deploy
+      name: deploy (hugo-helloworld)
+
+      install:
+        - sudo dpkg -i ./hugo_extended_0.74.3_Linux-64bit.deb
+
+      script:
+        - cd hugo-helloworld
+        -   hugo -D
+        - cd ..
+
+      deploy:
+        - provider: pages
+          skip_cleanup: true
+          local_dir: hugo-helloworld/public
+          github_token: $GITHUB_TOKEN
+          on:
+            branch: master
