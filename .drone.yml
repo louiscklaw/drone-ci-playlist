@@ -47,10 +47,10 @@ volumes:
 ---
 kind: secret
 name: dockerhub_user
-data: ot4LjMJdZkjghfrqYIgt1oiO3PnRYlTaJG+0TkP+zg1GHI9a
+data: jypUaLjjakqOLk7fIH0hQpVGTITfyp1qCD0FBJpr+cRVqaPa
 
 
 ---
 kind: secret
 name: dockerhub_password
-data: wsiguwAjyBgzJo7CUC0xPxTFxkW6TWliFsL0RKI0zDPTabwnAsw=
+data: sByUEsVEopgoyq7c5+ZepaNVx/gN5L/0r2sYBvpLqRB/yMXEwa8=
