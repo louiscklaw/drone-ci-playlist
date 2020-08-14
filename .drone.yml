@@ -18,8 +18,6 @@ steps:
     path: /var/run/docker.sock
   commands:
   - cd hello-docker-build-appium
-  - git clone https://github.com/appium/appium-docker-android.git
-  - cd appium-docker-android
   - docker build -t logickee/appium .
   - docker -v
   - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
