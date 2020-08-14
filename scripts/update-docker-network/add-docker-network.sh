@@ -1,62 +1,276 @@
 #!/usr/bin/env bash
 
-docker network create your-network0
-docker network create your-network1
-docker network create your-network2
-docker network create your-network3
-docker network create your-network4
-docker network create your-network5
-docker network create your-network6
-docker network create your-network7
-docker network create your-network8
-docker network create your-network9
-docker network create your-network10
-docker network create your-network11
-docker network create your-network12
-docker network create your-network13
-docker network create your-network14
-docker network create your-network15
-docker network create your-network16
-docker network create your-network17
-docker network create your-network18
-docker network create your-network19
-docker network create your-network20
-docker network create your-network21
-docker network create your-network22
-docker network create your-network23
-docker network create your-network24
-docker network create your-network25
-docker network create your-network26
-docker network create your-network27
-docker network create your-network28
-docker network create your-network29
-docker network create your-network30
-docker network create your-network31
-docker network create your-network32
-docker network create your-network33
-docker network create your-network34
-docker network create your-network35
-docker network create your-network36
-docker network create your-network37
-docker network create your-network38
-docker network create your-network39
-docker network create your-network40
-docker network create your-network41
-docker network create your-network42
-docker network create your-network43
-docker network create your-network44
-docker network create your-network45
-docker network create your-network46
-docker network create your-network47
-docker network create your-network48
-docker network create your-network49
-docker network create your-network50
-docker network create your-network51
-docker network create your-network52
-docker network create your-network53
-docker network create your-network54
-docker network create your-network55
-docker network create your-network56
-docker network create your-network57
-docker network create your-network58
-docker network create your-network59
+set -ex
+
+docker network create your-network0 &
+docker network create your-network1 &
+docker network create your-network2 &
+docker network create your-network3 &
+docker network create your-network4 &
+docker network create your-network5 &
+docker network create your-network6 &
+docker network create your-network7 &
+docker network create your-network8 &
+docker network create your-network9 &
+docker network create your-network10 &
+docker network create your-network11 &
+docker network create your-network12 &
+docker network create your-network13 &
+docker network create your-network14 &
+docker network create your-network15 &
+wait
+docker network create your-network16 &
+docker network create your-network17 &
+docker network create your-network18 &
+docker network create your-network19 &
+docker network create your-network20 &
+docker network create your-network21 &
+docker network create your-network22 &
+docker network create your-network23 &
+docker network create your-network24 &
+docker network create your-network25 &
+docker network create your-network26 &
+docker network create your-network27 &
+docker network create your-network28 &
+docker network create your-network29 &
+docker network create your-network30 &
+docker network create your-network31 &
+wait
+docker network create your-network32 &
+docker network create your-network33 &
+docker network create your-network34 &
+docker network create your-network35 &
+docker network create your-network36 &
+docker network create your-network37 &
+docker network create your-network38 &
+docker network create your-network39 &
+docker network create your-network40 &
+docker network create your-network41 &
+docker network create your-network42 &
+docker network create your-network43 &
+docker network create your-network44 &
+docker network create your-network45 &
+docker network create your-network46 &
+docker network create your-network47 &
+wait
+docker network create your-network48 &
+docker network create your-network49 &
+docker network create your-network50 &
+docker network create your-network51 &
+docker network create your-network52 &
+docker network create your-network53 &
+docker network create your-network54 &
+docker network create your-network55 &
+docker network create your-network56 &
+docker network create your-network57 &
+docker network create your-network58 &
+docker network create your-network59 &
+docker network create your-network60 &
+docker network create your-network61 &
+docker network create your-network62 &
+docker network create your-network63 &
+wait
+docker network create your-network64 &
+docker network create your-network65 &
+docker network create your-network66 &
+docker network create your-network67 &
+docker network create your-network68 &
+docker network create your-network69 &
+docker network create your-network70 &
+docker network create your-network71 &
+docker network create your-network72 &
+docker network create your-network73 &
+docker network create your-network74 &
+docker network create your-network75 &
+docker network create your-network76 &
+docker network create your-network77 &
+docker network create your-network78 &
+docker network create your-network79 &
+wait
+docker network create your-network80 &
+docker network create your-network81 &
+docker network create your-network82 &
+docker network create your-network83 &
+docker network create your-network84 &
+docker network create your-network85 &
+docker network create your-network86 &
+docker network create your-network87 &
+docker network create your-network88 &
+docker network create your-network89 &
+docker network create your-network90 &
+docker network create your-network91 &
+docker network create your-network92 &
+docker network create your-network93 &
+docker network create your-network94 &
+docker network create your-network95 &
+wait
+docker network create your-network96 &
+docker network create your-network97 &
+docker network create your-network98 &
+docker network create your-network99 &
+docker network create your-network100 &
+docker network create your-network101 &
+docker network create your-network102 &
+docker network create your-network103 &
+docker network create your-network104 &
+docker network create your-network105 &
+docker network create your-network106 &
+docker network create your-network107 &
+docker network create your-network108 &
+docker network create your-network109 &
+docker network create your-network110 &
+docker network create your-network111 &
+wait
+docker network create your-network112 &
+docker network create your-network113 &
+docker network create your-network114 &
+docker network create your-network115 &
+docker network create your-network116 &
+docker network create your-network117 &
+docker network create your-network118 &
+docker network create your-network119 &
+docker network create your-network120 &
+docker network create your-network121 &
+docker network create your-network122 &
+docker network create your-network123 &
+docker network create your-network124 &
+docker network create your-network125 &
+docker network create your-network126 &
+docker network create your-network127 &
+wait
+docker network create your-network128 &
+docker network create your-network129 &
+docker network create your-network130 &
+docker network create your-network131 &
+docker network create your-network132 &
+docker network create your-network133 &
+docker network create your-network134 &
+docker network create your-network135 &
+docker network create your-network136 &
+docker network create your-network137 &
+docker network create your-network138 &
+docker network create your-network139 &
+docker network create your-network140 &
+docker network create your-network141 &
+docker network create your-network142 &
+docker network create your-network143 &
+wait
+docker network create your-network144 &
+docker network create your-network145 &
+docker network create your-network146 &
+docker network create your-network147 &
+docker network create your-network148 &
+docker network create your-network149 &
+docker network create your-network150 &
+docker network create your-network151 &
+docker network create your-network152 &
+docker network create your-network153 &
+docker network create your-network154 &
+docker network create your-network155 &
+docker network create your-network156 &
+docker network create your-network157 &
+docker network create your-network158 &
+docker network create your-network159 &
+wait
+docker network create your-network160 &
+docker network create your-network161 &
+docker network create your-network162 &
+docker network create your-network163 &
+docker network create your-network164 &
+docker network create your-network165 &
+docker network create your-network166 &
+docker network create your-network167 &
+docker network create your-network168 &
+docker network create your-network169 &
+docker network create your-network170 &
+docker network create your-network171 &
+docker network create your-network172 &
+docker network create your-network173 &
+docker network create your-network174 &
+docker network create your-network175 &
+wait
+docker network create your-network176 &
+docker network create your-network177 &
+docker network create your-network178 &
+docker network create your-network179 &
+docker network create your-network180 &
+docker network create your-network181 &
+docker network create your-network182 &
+docker network create your-network183 &
+docker network create your-network184 &
+docker network create your-network185 &
+docker network create your-network186 &
+docker network create your-network187 &
+docker network create your-network188 &
+docker network create your-network189 &
+docker network create your-network190 &
+docker network create your-network191 &
+wait
+docker network create your-network192 &
+docker network create your-network193 &
+docker network create your-network194 &
+docker network create your-network195 &
+docker network create your-network196 &
+docker network create your-network197 &
+docker network create your-network198 &
+docker network create your-network199 &
+docker network create your-network200 &
+docker network create your-network201 &
+docker network create your-network202 &
+docker network create your-network203 &
+docker network create your-network204 &
+docker network create your-network205 &
+docker network create your-network206 &
+docker network create your-network207 &
+wait
+docker network create your-network208 &
+docker network create your-network209 &
+docker network create your-network210 &
+docker network create your-network211 &
+docker network create your-network212 &
+docker network create your-network213 &
+docker network create your-network214 &
+docker network create your-network215 &
+docker network create your-network216 &
+docker network create your-network217 &
+docker network create your-network218 &
+docker network create your-network219 &
+docker network create your-network220 &
+docker network create your-network221 &
+docker network create your-network222 &
+docker network create your-network223 &
+wait
+docker network create your-network224 &
+docker network create your-network225 &
+docker network create your-network226 &
+docker network create your-network227 &
+docker network create your-network228 &
+docker network create your-network229 &
+docker network create your-network230 &
+docker network create your-network231 &
+docker network create your-network232 &
+docker network create your-network233 &
+docker network create your-network234 &
+docker network create your-network235 &
+docker network create your-network236 &
+docker network create your-network237 &
+docker network create your-network238 &
+docker network create your-network239 &
+wait
+docker network create your-network240 &
+docker network create your-network241 &
+docker network create your-network242 &
+docker network create your-network243 &
+docker network create your-network244 &
+docker network create your-network245 &
+docker network create your-network246 &
+docker network create your-network247 &
+docker network create your-network248 &
+docker network create your-network249 &
+docker network create your-network250 &
+docker network create your-network251 &
+docker network create your-network252 &
+docker network create your-network253 &
+docker network create your-network254 &
+docker network create your-network255 &
+wait
