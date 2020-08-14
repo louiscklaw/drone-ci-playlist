@@ -5,18 +5,39 @@ name: helloworld
 type: docker
 
 steps:
-- name: test hello-docker-build-appium
-  image: logickee/ubuntu-docker
+- name: helloworld
+  image: ubuntu:18.04
+  environment:
+    DEBIAN_FRONTEND: noninteractive
+    DOCKERHUB_USER:
+      from_secret: dockerhub_user
+    DOCKERHUB_PASSWORD:
+      from_secret: dockerhub_password
   volumes:
   - name: docker_socket
     path: /var/run/docker.sock
   commands:
-  - docker -v
-  - cd hello-docker-build-appium
-  - docker build -t logickee/appium .
+  - apt-get update
+  - apt-get install -yq software-properties-common
+  - apt-get install -yq lsb-release
+  # - apt-get remove docker docker-engine docker.io
+  - apt-get install -yq apt-transport-https ca-certificates curl software-properties-common
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+  - add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable"
+  - apt-get install -yq docker-ce
+
+  - cd hello-docker-build
+  -   docker build -t logickee/ubuntu-docker .
+  - cd ..
+
+  # check if the environment variables can be accessed
+  - echo $DOCKERHUB_USER
+  - echo $DOCKERHUB_PASSWORD
 
   - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
-  - docker push logickee/appium
+  - docker push logickee/ubuntu-docker
+
+
 
 volumes:
 - name: docker_socket
