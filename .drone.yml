@@ -204,6 +204,24 @@ data: jsiRimOeYe7wYVsxd2i842cuCKoX7yChzojECHEcbBV5lx8Abx7H5vr0f4UfkB8uB60p6rIbl+
 
 ---
 
+# inserted by test hello-hugo/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: hello-hugo
+type: docker
+
+steps:
+- name: helloworld
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+# inserted by test hello-hugo/.drone.yml end
+
+---
+
 # inserted by test hello-nodejs/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -353,6 +371,7 @@ depends_on:
   - hello-freecad-checking
   - hello-gatsby
   - hello-gh-pages
+  - hello-hugo
   - hello-nodejs
   - hello-pipenv
   - hello-react
