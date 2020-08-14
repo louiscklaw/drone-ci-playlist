@@ -19,18 +19,18 @@ steps:
   - apt-get update
   - apt-get install -yq software-properties-common
   - apt-get install -yq lsb-release
-  - apt-get remove docker docker-engine docker.io
-  - apt-get install -yq apt-transport-https ca-certificates curl software-properties-common
-  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-  - add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable"
-  - apt-get install -yq docker-ce
+  # - apt-get remove docker docker-engine docker.io
+  # - apt-get install -yq apt-transport-https ca-certificates curl software-properties-common
+  # - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+  # - add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable"
+  # - apt-get install -yq docker-ce
 
-  - cd hello-docker-build
-  -   docker build -t logickee/ubuntu-docker .
-  - cd ..
+  # - cd hello-docker-build
+  # -   docker build -t logickee/ubuntu-docker .
+  # - cd ..
 
-  - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
-  - docker push logickee/ubuntu-docker
+  # - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
+  # - docker push logickee/ubuntu-docker
 
 
 
