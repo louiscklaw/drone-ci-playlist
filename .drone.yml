@@ -7,13 +7,8 @@ type: docker
 steps:
 - name: helloworld
   image: alpine
-  volumes:
-  - name: cache
-    path: /tmp/cache
   commands:
-  - ls -l /tmp/cache
-
-volumes:
-- name: cache
-  host:
-    path: /home/logic
+  - echo hello
+  - echo world
+  - echo $DRONE_BRANCH
+  - helloworld/build.sh
