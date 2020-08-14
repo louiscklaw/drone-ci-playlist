@@ -15,3 +15,14 @@ steps:
   -     hugo -D
   -   cd ..
   - cd ..
+
+- name: test themes-showcase-tryout
+  image: ubuntu:18.04
+  commands:
+  - cd hello-hugo
+  -   dpkg -i ./hugo_extended_0.74.3_Linux-64bit.deb
+  -
+  -   cd themes-showcase-tryout
+  -     hugo -D
+  -   cd ..
+  - cd ..
