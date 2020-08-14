@@ -6,11 +6,7 @@ type: docker
 
 steps:
 - name: helloworld
-  image: alpine
+  image: ubuntu:18.04
   commands:
-  - add-apt-repository -y ppa:freecad-maintainers/freecad-stable
-  - apt-get update
-  - apt-get install -y freecad freecad-python3
-  - mkdir /usr/lib/freecad-python3/Mod
-
-  - for i in $(find . -name '*.FCStd'); do python3 travis-freecad-checking/freecad_open_test.py $i; done
+    - cd hello-freecad-checking
+    -   ./build.sh
