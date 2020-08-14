@@ -72,7 +72,7 @@ def replacePipelineName(content_in, pipeline_name):
   return content_in
 
 def writeMainDroneYml(filepath, content):
-  f_main_drone = open(filepath,'r+')
+  f_main_drone = open(filepath,'w+')
   f_main_drone.truncate(0)
   f_main_drone.writelines(content)
   f_main_drone.close()
