@@ -1,4 +1,4 @@
-# inserted by test hello-appium/.drone.yml start
+main_drone_yml_list# inserted by test hello-appium/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
 kind: pipeline
