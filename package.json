@@ -23,7 +23,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": ""
+      "pre-commit": "",
+      "pre-push":"scripts/pre-push-check.sh"
     }
   },
   "devDependencies": {}
