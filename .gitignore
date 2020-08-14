@@ -1,6 +1,6 @@
-.env.docker
-.env.*
-.env
+**/.env.docker
+**/.env.*
+**/.env
 .local
 .python_history
 .bash_history

@@ -21,4 +21,4 @@ RUN git config --global user.email "drone_test@louislabs.com" && \
 WORKDIR '/root'
 
 # Define default command.
-CMD ["bash"]
+CMD ["/usr/sbin/init"]
