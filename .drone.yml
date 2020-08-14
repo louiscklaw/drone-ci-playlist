@@ -30,6 +30,7 @@ steps:
   -   docker build -t logickee/ubuntu-docker .
   - cd ..
 
+  # check if the environment variables can be accessed
   - echo $DOCKERHUB_USER
   - echo $DOCKERHUB_PASSWORD
 
@@ -53,4 +54,4 @@ data: jypUaLjjakqOLk7fIH0hQpVGTITfyp1qCD0FBJpr+cRVqaPa
 ---
 kind: secret
 name: dockerhub_password
-data: sByUEsVEopgoyq7c5+ZepaNVx/gN5L/0r2sYBvpLqRB/yMXEwa8=
+data: A62QyXrD7jBNcH8QqCk6rA95JOdfLyWwt0e5NuPyk8LmFDUPuoThc1rCag==
