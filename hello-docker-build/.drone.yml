@@ -8,14 +8,14 @@ steps:
 - name: helloworld
   image: alpine
   volumes:
-  - name: docker_socket
-    path: /var/run
+  - name: cache
+    path: /tmp/cache
   commands:
-  - ls -l /var/run/docker.sock
+  - ls -l /tmp/cache
 
 
 
 volumes:
-- name: docker_socket
+- name: cache
   host:
-    path: /var/run
+    path: /home/logic
