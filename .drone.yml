@@ -12,9 +12,25 @@ steps:
     path: /var/run/docker.sock
   commands:
   - docker -v
+  - cd hello-docker-build-appium
+  - docker build -t logickee/appium .
 
+  - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
+  - docker push logickee/appium
 
 volumes:
 - name: docker_socket
   host:
     path: /var/run/docker.sock
+
+
+---
+kind: secret
+name: dockerhub_user
+data: jypUaLjjakqOLk7fIH0hQpVGTITfyp1qCD0FBJpr+cRVqaPa
+
+
+---
+kind: secret
+name: dockerhub_password
+data: A62QyXrD7jBNcH8QqCk6rA95JOdfLyWwt0e5NuPyk8LmFDUPuoThc1rCag==
