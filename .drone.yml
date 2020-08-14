@@ -17,6 +17,7 @@ steps:
   - name: docker_socket
     path: /var/run/docker.sock
   commands:
+  - dig registry-1.docker.io
   - apt-get update
   - apt-get install -yq software-properties-common
   - apt-get install -yq lsb-release
