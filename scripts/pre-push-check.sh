@@ -10,12 +10,14 @@ cd /home/logic/_workspace/drone-ci-playlist
   scripts/build_main_drone.sh
 
   HELLO=$(git status | grep -i "modified:   .drone.yml")
+
+  rm -rf .drone.yml
+  mv .drone.yml.origional .drone.yml || true
+
   if [[ -z $HELLO ]]; then
     echo "main .drone.yml is updated, passing..."
   else
     echo 'main .drone.yml is not update, escape !'
-    rm -rf .drone.yml
-    mv .drone.yml.origional .drone.yml || true
     cd -
     exit -1
   fi
