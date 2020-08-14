@@ -16,7 +16,7 @@ steps:
   -   cd ..
   - cd ..
 
-- name: test hugo-helloworld
+- name: test themes-showcase-tryout
   image: ubuntu:18.04
   commands:
   - cd hello-hugo
