@@ -9,7 +9,7 @@ steps:
   image: alpine
   volumes:
   - name: docker_socket
-    path: /var/run/docker.sock
+    path: /var/run
   commands:
   - ls -l /var/run/docker.sock
 
@@ -18,4 +18,4 @@ steps:
 volumes:
 - name: docker_socket
   host:
-    path: /var/run/docker.sock
+    path: /var/run
