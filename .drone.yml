@@ -26,9 +26,9 @@ steps:
   - add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable"
   - apt-get install -yq docker-ce
 
-  # - cd hello-docker-build
-  # -   docker build -t logickee/ubuntu-docker .
-  # - cd ..
+  - cd hello-docker-build
+  -   docker build -t logickee/ubuntu-docker .
+  - cd ..
 
   # - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
   # - docker push logickee/ubuntu-docker
