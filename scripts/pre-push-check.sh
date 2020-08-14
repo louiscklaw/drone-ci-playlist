@@ -13,9 +13,13 @@ cd /home/logic/_workspace/drone-ci-playlist
   mv .drone.yml.origional .drone.yml || true
 
   if [[ -z $HELLO ]]; then
+    echo ""
     echo "main .drone.yml is updated, passing..."
+    echo ""
   else
-    echo 'main .drone.yml is not update, escape !'
+    echo ""
+    echo ' !!! main .drone.yml is not update, escape !!! '
+    echo ""
     cd -
     exit -1
   fi
