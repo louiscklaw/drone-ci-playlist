@@ -13,8 +13,19 @@ regenMainDroneYml(){
 }
 
 regenCommit(){
+
   cd /home/logic/_workspace/drone-ci-playlist
-    regenMainDroneYml && sleep 0.1 && git add .drone.yml
-    git commit -m$@
+    scripts/build_main_drone.sh
+
+    sleep 0.1
+    git add .drone.yml
+
+    git commit
   cd -
+
 }
+
+# gc(){
+#   echo 'use regenCommit to commit on this branch'
+#   echo 'do nothing now'
+# }
