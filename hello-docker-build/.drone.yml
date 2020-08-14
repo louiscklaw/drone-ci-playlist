@@ -1,0 +1,11 @@
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: helloworld
+type: docker
+
+steps:
+- name: helloworld
+  image: ubuntu:18.04
+  commands:
+  - hello-docker-build
