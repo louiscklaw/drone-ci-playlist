@@ -12,3 +12,4 @@ https://docs.drone.io/pipeline/docker/examples/
 ### master
 ![Drone (self-hosted) with branch](https://img.shields.io/drone/build/louiscklaw/drone-ci-playlist/master?server=http%3A%2F%2Fhome.louislabs.com%3A52101&style=plastic)
 1
+1
