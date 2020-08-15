@@ -1,5 +1,9 @@
 # https://docs.drone.io/pipeline/environment/reference/
 
+# build this drone require a trusted permission in setting page
+# to show the trusted options in setting page require an administrator
+# grant admin to a user requires setting options in drone server up command script
+
 kind: pipeline
 name: helloworld
 type: docker
