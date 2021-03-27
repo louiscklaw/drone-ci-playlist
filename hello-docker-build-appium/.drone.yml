@@ -1,0 +1,41 @@
+# https://docs.drone.io/pipeline/environment/reference/
+
+kind: pipeline
+name: helloworld
+type: docker
+
+steps:
+- name: test hello-docker-build-appium
+  image: logickee/ubuntu-docker
+  environment:
+    DEBIAN_FRONTEND: noninteractive
+    DOCKERHUB_USER:
+      from_secret: dockerhub_user
+    DOCKERHUB_PASSWORD:
+      from_secret: dockerhub_password
+  volumes:
+  - name: docker_socket
+    path: /var/run/docker.sock
+  commands:
+  - cd hello-docker-build-appium
+  - docker build -t logickee/appium .
+  - docker -v
+  - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
+  - docker push logickee/appium
+
+volumes:
+- name: docker_socket
+  host:
+    path: /var/run/docker.sock
+
+
+---
+kind: secret
+name: dockerhub_user
+data: jypUaLjjakqOLk7fIH0hQpVGTITfyp1qCD0FBJpr+cRVqaPa
+
+
+---
+kind: secret
+name: dockerhub_password
+data: A62QyXrD7jBNcH8QqCk6rA95JOdfLyWwt0e5NuPyk8LmFDUPuoThc1rCag==

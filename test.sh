@@ -2,4 +2,4 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-./hello-docker-build/docker_build.sh
+./hello-docker-build-appium/docker_build.sh

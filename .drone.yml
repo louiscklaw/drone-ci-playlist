@@ -8,18 +8,17 @@ name: hello-alpine
 type: docker
 
 steps:
-- name: helloworld
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-  - helloworld/build.sh
+  - name: helloworld
+    image: alpine
+    commands:
+      - echo hello
+      - echo world
+      - echo $DRONE_BRANCH
+      - helloworld/build.sh
 
 # inserted by test hello-alpine/.drone.yml end
 
 ---
-
 # inserted by test hello-appium/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -28,51 +27,48 @@ name: hello-appium
 type: docker
 
 steps:
-- name: test
-  image: appium/appium
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
+  - name: test
+    image: appium/appium
+    commands:
+      - echo hello
+      - echo world
+      - echo $DRONE_BRANCH
 
 # inserted by test hello-appium/.drone.yml end
 
 ---
-
 # inserted by test hello-appium-x86-image/.drone.yml start
 kind: pipeline
 name: hello-appium-x86-image
 type: docker
 
 steps:
-- name: test
-  image: logickee/appium_x86_basic
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
+  - name: test
+    image: logickee/appium_x86_basic
+    commands:
+      - echo hello
+      - echo world
+      - echo $DRONE_BRANCH
 
 # inserted by test hello-appium-x86-image/.drone.yml end
 
 ---
-
 # inserted by test hello-appium-x86-image-with-options/.drone.yml start
 kind: pipeline
 name: hello-appium-x86-image-with-options
 type: docker
 
 steps:
-- name: test
-  image: logickee/appium_x86_plus_optional
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
+  - name: test
+    image: logickee/appium_x86_plus_optional
+    commands:
+      - echo hello
+      - echo world
+      - echo $DRONE_BRANCH
 
 # inserted by test hello-appium-x86-image-with-options/.drone.yml end
 
 ---
-
 # inserted by test hello-build-stages/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -81,72 +77,132 @@ name: hello-build-stages
 type: docker
 
 steps:
+  - name: Build
+    image: alpine
+    commands:
+      - echo hello
+      - echo world
+      - echo $DRONE_BRANCH
 
-- name: Build
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
+  - name: Test
+    image: alpine
+    commands:
+      - echo hello
+      - echo world
+      - echo $DRONE_BRANCH
 
-- name: Test
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-
-- name: Deploy
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
+  - name: Deploy
+    image: alpine
+    commands:
+      - echo hello
+      - echo world
+      - echo $DRONE_BRANCH
 
 # inserted by test hello-build-stages/.drone.yml end
 
 ---
-
 # inserted by test hello-docker-build/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
-
-# build this drone require a trusted permission in setting page
-# to show the trusted options in setting page require an administrator
-# grant admin to a user requires setting options in drone server up command script
 
 kind: pipeline
 name: hello-docker-build
 type: docker
 
 steps:
-- name: helloworld
-  image: ubuntu:18.04
-  volumes:
-  - name: docker_socket
-    path: /var/run/docker.sock
-  commands:
-  - apt-get update
-  - apt-get install -yq software-properties-common
-  - apt-get install -yq lsb-release
-  - cd hello-docker-build
-  -   apt-get remove docker docker-engine docker.io
-  -   apt-get install -yq apt-transport-https ca-certificates curl software-properties-common
-  -   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-  -   add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable"
-  -   apt-get install -yq docker-ce
-  -   docker build .
-  - cd ..
+  - name: helloworld
+    image: ubuntu:18.04
+    environment:
+      DEBIAN_FRONTEND: noninteractive
+      DOCKERHUB_USER:
+        from_secret: dockerhub_user
+      DOCKERHUB_PASSWORD:
+        from_secret: dockerhub_password
+    volumes:
+      - name: docker_socket
+        path: /var/run/docker.sock
+    commands:
+      - apt-get update
+      - apt-get install -yq software-properties-common
+      - apt-get install -yq lsb-release
+      # - apt-get remove docker docker-engine docker.io
+      - apt-get install -yq apt-transport-https ca-certificates curl software-properties-common
+      - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+      - add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable"
+      - apt-get install -yq docker-ce
 
+      - cd hello-docker-build
+      - docker build -t logickee/ubuntu-docker .
+      - cd ..
 
+      # check if the environment variables can be accessed
+      - echo $DOCKERHUB_USER
+      - echo $DOCKERHUB_PASSWORD
+
+      - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
+      - docker push logickee/ubuntu-docker
 
 volumes:
-- name: docker_socket
-  host:
-    path: /var/run/docker.sock
+  - name: docker_socket
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: secret
+name: dockerhub_user
+data: jypUaLjjakqOLk7fIH0hQpVGTITfyp1qCD0FBJpr+cRVqaPa
+
+---
+kind: secret
+name: dockerhub_password
+data: A62QyXrD7jBNcH8QqCk6rA95JOdfLyWwt0e5NuPyk8LmFDUPuoThc1rCag==
+
 # inserted by test hello-docker-build/.drone.yml end
 
 ---
+# inserted by test hello-docker-build-appium/.drone.yml start
+# https://docs.drone.io/pipeline/environment/reference/
 
+kind: pipeline
+name: hello-docker-build-appium
+type: docker
+
+steps:
+  - name: test hello-docker-build-appium
+    image: logickee/ubuntu-docker
+    environment:
+      DEBIAN_FRONTEND: noninteractive
+      DOCKERHUB_USER:
+        from_secret: dockerhub_user
+      DOCKERHUB_PASSWORD:
+        from_secret: dockerhub_password
+    volumes:
+      - name: docker_socket
+        path: /var/run/docker.sock
+    commands:
+      - cd hello-docker-build-appium
+      - docker build -t logickee/appium .
+      - docker -v
+      - docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
+      - docker push logickee/appium
+
+volumes:
+  - name: docker_socket
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: secret
+name: dockerhub_user
+data: jypUaLjjakqOLk7fIH0hQpVGTITfyp1qCD0FBJpr+cRVqaPa
+
+---
+kind: secret
+name: dockerhub_password
+data: A62QyXrD7jBNcH8QqCk6rA95JOdfLyWwt0e5NuPyk8LmFDUPuoThc1rCag==
+
+# inserted by test hello-docker-build-appium/.drone.yml end
+
+---
 # inserted by test hello-docker-runner-volume/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -155,39 +211,37 @@ name: hello-docker-runner-volume
 type: docker
 
 steps:
-- name: helloworld
-  image: alpine
-  volumes:
-  - name: cache
-    path: /tmp/cache
-  commands:
-  - ls -l /tmp/cache
+  - name: helloworld
+    image: alpine
+    volumes:
+      - name: cache
+        path: /tmp/cache
+    commands:
+      - ls -l /tmp/cache
 
 volumes:
-- name: cache
-  host:
-    path: /home/logic
+  - name: cache
+    host:
+      path: /home/logic
 
 # inserted by test hello-docker-runner-volume/.drone.yml end
 
 ---
-
 # inserted by test hello-failure/.drone.yml start
 kind: pipeline
 name: hello-failure
 type: docker
 
 steps:
-- name: hello_failure
-  failure: ignore
-  image: ubuntu
-  commands:
-  - ./hello-failure/fail.sh
+  - name: hello_failure
+    failure: ignore
+    image: ubuntu
+    commands:
+      - ./hello-failure/fail.sh
 
 # inserted by test hello-failure/.drone.yml end
 
 ---
-
 # inserted by test hello-firebase/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -196,19 +250,18 @@ name: hello-firebase
 type: docker
 
 steps:
-- name: helloworld
-  image: node:lts
-  environment:
-    FIREBASE_TOKEN:
-      from_secret: firebase
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-  - npm install -g firebase-tools firebase-functions firebase-admin
-  - cd hello-firebase
-  -   firebase deploy --token $FIREBASE_TOKEN --non-interactive
-
+  - name: helloworld
+    image: node:lts
+    environment:
+      FIREBASE_TOKEN:
+        from_secret: firebase
+    commands:
+      - echo hello
+      - echo world
+      - echo $DRONE_BRANCH
+      - npm install -g firebase-tools firebase-functions firebase-admin
+      - cd hello-firebase
+      - firebase deploy --token $FIREBASE_TOKEN --non-interactive
 
 ---
 kind: secret
@@ -218,7 +271,6 @@ data: WkHEj0Tv3eHL/xjk5ZxQmR97kA9RL1qNH8j4mhLY2mF53xKxhkvPH2T9wuZN0hewwcHfA1yzH2
 # inserted by test hello-firebase/.drone.yml end
 
 ---
-
 # inserted by test hello-freecad-checking/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -227,16 +279,15 @@ name: hello-freecad-checking
 type: docker
 
 steps:
-- name: helloworld
-  image: ubuntu:18.04
-  commands:
-    - cd hello-freecad-checking
-    -   ./build.sh
+  - name: helloworld
+    image: ubuntu:18.04
+    commands:
+      - cd hello-freecad-checking
+      - ./build.sh
 
 # inserted by test hello-freecad-checking/.drone.yml end
 
 ---
-
 # inserted by test hello-gatsby/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -245,21 +296,20 @@ name: hello-gatsby
 type: docker
 
 steps:
-- name: helloworld
-  image: node:lts
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
+  - name: helloworld
+    image: node:lts
+    commands:
+      - echo hello
+      - echo world
+      - echo $DRONE_BRANCH
 
-  - cd hello-gatsby
-  -   yarn
-  -   yarn build
+      - cd hello-gatsby
+      - yarn
+      - yarn build
 
 # inserted by test hello-gatsby/.drone.yml end
 
 ---
-
 # inserted by test hello-gh-pages/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -268,19 +318,19 @@ name: hello-gh-pages
 type: docker
 
 steps:
-- name: helloworld
-  image: node:lts
-  environment:
-    GH_TOKEN:
-      from_secret: gh_token
-  commands:
-    - git clone http://louiscklaw:$GH_TOKEN@github.com/louiscklaw/drone-ci-playlist /tmp/drone-ci-playlist
+  - name: helloworld
+    image: node:lts
+    environment:
+      GH_TOKEN:
+        from_secret: gh_token
+    commands:
+      - git clone http://louiscklaw:$GH_TOKEN@github.com/louiscklaw/drone-ci-playlist /tmp/drone-ci-playlist
 
-    - cd /tmp/drone-ci-playlist
-    - git checkout $DRONE_BRANCH
-    -   cd hello-gh-pages
-    -     npm install gh-pages -g
-    -     gh-pages -d public -b gh-pages
+      - cd /tmp/drone-ci-playlist
+      - git checkout $DRONE_BRANCH
+      - cd hello-gh-pages
+      - npm install gh-pages -g
+      - gh-pages -d public -b gh-pages
 
 ---
 kind: secret
@@ -290,7 +340,6 @@ data: jsiRimOeYe7wYVsxd2i842cuCKoX7yChzojECHEcbBV5lx8Abx7H5vr0f4UfkB8uB60p6rIbl+
 # inserted by test hello-gh-pages/.drone.yml end
 
 ---
-
 # inserted by test hello-hugo/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -299,32 +348,31 @@ name: hello-hugo
 type: docker
 
 steps:
-- name: test hugo-helloworld
-  image: ubuntu:18.04
-  commands:
-  - cd hello-hugo
-  -   dpkg -i ./hugo_extended_0.74.3_Linux-64bit.deb
-  -
-  -   cd hugo-helloworld
-  -     hugo -D
-  -   cd ..
-  - cd ..
+  - name: test hugo-helloworld
+    image: ubuntu:18.04
+    commands:
+      - cd hello-hugo
+      - dpkg -i ./hugo_extended_0.74.3_Linux-64bit.deb
+      -
+      - cd hugo-helloworld
+      - hugo -D
+      - cd ..
+      - cd ..
 
-- name: test themes-showcase-tryout
-  image: ubuntu:18.04
-  commands:
-  - cd hello-hugo
-  -   dpkg -i ./hugo_extended_0.74.3_Linux-64bit.deb
-  -
-  -   cd themes-showcase-tryout
-  -     hugo -D
-  -   cd ..
-  - cd ..
+  - name: test themes-showcase-tryout
+    image: ubuntu:18.04
+    commands:
+      - cd hello-hugo
+      - dpkg -i ./hugo_extended_0.74.3_Linux-64bit.deb
+      -
+      - cd themes-showcase-tryout
+      - hugo -D
+      - cd ..
+      - cd ..
 
 # inserted by test hello-hugo/.drone.yml end
 
 ---
-
 # inserted by test hello-nodejs/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -333,17 +381,16 @@ name: hello-nodejs
 type: docker
 
 steps:
-- name: helloworld
-  image: node:lts
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
+  - name: helloworld
+    image: node:lts
+    commands:
+      - echo hello
+      - echo world
+      - echo $DRONE_BRANCH
 
 # inserted by test hello-nodejs/.drone.yml end
 
 ---
-
 # inserted by test hello-pipenv/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -352,26 +399,25 @@ name: hello-pipenv
 type: docker
 
 steps:
-- name: helloworld
-  image: logickee/ubuntu-basic:latest
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-  - apt-get update
-  - apt-get install -y git
-  - apt-get install -y python3 python3-pip
-  - apt-get install -y entr rsync
-  - python3 -m pip install pipenv
-  - cd hello-pipenv
-  -   pipenv sync
-  -   pipenv run python3 main.py
-  - cd -
+  - name: helloworld
+    image: logickee/ubuntu-basic:latest
+    commands:
+      - echo hello
+      - echo world
+      - echo $DRONE_BRANCH
+      - apt-get update
+      - apt-get install -y git
+      - apt-get install -y python3 python3-pip
+      - apt-get install -y entr rsync
+      - python3 -m pip install pipenv
+      - cd hello-pipenv
+      - pipenv sync
+      - pipenv run python3 main.py
+      - cd -
 
 # inserted by test hello-pipenv/.drone.yml end
 
 ---
-
 # inserted by test hello-react/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -380,35 +426,34 @@ name: hello-react
 type: docker
 
 steps:
-- name: helloworld
-  image: node:lts
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
+  - name: helloworld
+    image: node:lts
+    commands:
+      - echo hello
+      - echo world
+      - echo $DRONE_BRANCH
 
-  - cd hello-react
-  -   yarn
-  -   yarn test
-  -   yarn build
+      - cd hello-react
+      - yarn
+      - yarn test
+      - yarn build
 
 # inserted by test hello-react/.drone.yml end
 
 ---
-
 # inserted by test hello-secrets/.drone.yml start
 
 kind: pipeline
 name: hello-secrets
 steps:
-- name: build
-  image: ubuntu
-  environment:
-    HELLO:
-      from_secret: hello
+  - name: build
+    image: ubuntu
+    environment:
+      HELLO:
+        from_secret: hello
 
-  commands:
-  - echo $HELLO
+    commands:
+      - echo $HELLO
 
 ---
 kind: secret
@@ -418,7 +463,6 @@ data: fRBBQR1N0FejBRMwbnYCrzDDqKQLvYLcPmKmXSxoUIcv
 # inserted by test hello-secrets/.drone.yml end
 
 ---
-
 # inserted by test helloworld/.drone.yml start
 # https://docs.drone.io/pipeline/environment/reference/
 
@@ -427,42 +471,41 @@ name: helloworld
 type: docker
 
 steps:
-- name: helloworld
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
-  - echo $DRONE_BRANCH
-  - helloworld/build.sh
+  - name: helloworld
+    image: alpine
+    commands:
+      - echo hello
+      - echo world
+      - echo $DRONE_BRANCH
+      - helloworld/build.sh
 
 # inserted by test helloworld/.drone.yml end
 
 ---
-
 # inserted by test hello-merger/.drone.yml start
 kind: pipeline
 name: hello-merger
 type: docker
 
 steps:
-- name: hello-merger
-  image: logickee/ubuntu-basic
-  commands:
-  - echo $DRONE_BRANCH
+  - name: hello-merger
+    image: logickee/ubuntu-basic
+    commands:
+      - echo $DRONE_BRANCH
 
-  - git clone https://$GITHUB_TOKEN@github.com/louiscklaw/drone-ci-playlist.git /tmp/test_git_dir
+      - git clone https://$GITHUB_TOKEN@github.com/louiscklaw/drone-ci-playlist.git /tmp/test_git_dir
 
-  - cd /tmp/test_git_dir
-  -   git checkout $DRONE_BRANCH
-  - cd -
+      - cd /tmp/test_git_dir
+      - git checkout $DRONE_BRANCH
+      - cd -
 
-  - cd hello-merger
-  -   pipenv run python3 ./src/main.py /tmp/test_git_dir
-  - cd -
+      - cd hello-merger
+      - pipenv run python3 ./src/main.py /tmp/test_git_dir
+      - cd -
 
-  environment:
-    GITHUB_TOKEN:
-      from_secret: GITHUB_TOKEN
+    environment:
+      GITHUB_TOKEN:
+        from_secret: GITHUB_TOKEN
 
 # ERROR_CHECK: linter: invalid or unknown pipeline dependency
 # depends_on will update by scripts/build.sh
@@ -473,6 +516,7 @@ depends_on:
   - hello-appium-x86-image-with-options
   - hello-build-stages
   - hello-docker-build
+  - hello-docker-build-appium
   - hello-docker-runner-volume
   - hello-failure
   - hello-firebase
@@ -486,18 +530,15 @@ depends_on:
   - hello-secrets
   - helloworld
 
-
 trigger:
   status:
-  - success
+    - success
   branch:
-  - develop
-  - test/*
-
+    - develop
+    - test/*
 
 ---
 kind: secret
 name: GITHUB_TOKEN
 data: bzDZQ+2HFTzRwXkVM8MmstspQh0rNwkvU+x5IPacewYSIVGe6oewX/4JAJW3i7dJ9T6c4Ea+8zM1NvCc95sbR3qrkH4=
-
 # inserted by test hello-merger/.drone.yml end

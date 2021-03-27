@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+
+
+
+helloearth(){
+  echo /home/logic/_workspace/preactjs-playlist/scripts/update_shortcut.rc
+}
+
+update_tryout_shortcut(){
+  TMP_DIR=$(mktemp -d)
+  PY_CONTENT=$(cat scripts/update_shortcut.py)
+
+  rsync -avzh ./.env $TMP_DIR/.env
+
+  python3 scripts/update_shortcut.py $TMP_DIR/.env
+
+  rsync -avzh $TMP_DIR/.env ./.env
+
+}
+
+update_scripts(){
+  SCRIPT_FILE=$(realpath $0)
+  PROJ_HOME=$(dirname $SCRIPT_FILE)
+  MASTER_GITHUB_PROJ_HOME='/home/logic/_workspace/github-playlist'
+
+  rsync -avzh $MASTER_GITHUB_PROJ_HOME/scripts/update_shortcut.py $PROJ_HOME/scripts
+
+  rsync -avzh $MASTER_GITHUB_PROJ_HOME/scripts/update_shortcut.rc $PROJ_HOME/scripts
+
+  rsync -avzh $PROJ_HOME/scripts/update_shortcut.py $MASTER_GITHUB_PROJ_HOME/scripts
+
+  rsync -avzh $PROJ_HOME/scripts/update_shortcut.py $MASTER_GITHUB_PROJ_HOME/scripts
+
+  cd && cd -
+
+}
+
+new_from(){
+  set -x
+
+  rm -rf * &
+  rm -rf .* &
+  wait
+
+  TEST=`echo $PWD|rev |cut -d'/' -f1 |rev`
+  # git branch -D test/$TEST
+  # git checkout -b test/$TEST
+
+  rsync -avzh --exclude node_modules --exclude .cache --exclude public ../$1/ .
+
+}
+
+helloworld(){
+  echo 'helloworld'
+}
