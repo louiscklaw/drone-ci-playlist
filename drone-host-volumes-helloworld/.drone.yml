@@ -3,8 +3,16 @@ type: docker
 name: default
 
 steps:
-  - name: greeting
-    image: alpine
-    commands:
-      - echo hello
-      - echo world
+- name: build
+  image: node
+  volumes:
+  - name: logic_home
+    path: /tmp/home
+  commands:
+  - npm install
+  - npm test
+
+volumes:
+- name: logic_home
+  host:
+    path: /home/logic/_workspace
