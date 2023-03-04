@@ -7,10 +7,10 @@ steps:
   image: node
   volumes:
   - name: logic_home
-    path: /tmp/home
+    path: /tmp/logic_home
   commands:
   - pwd
-  - ls -l
+  - ls -l /tmp/logic_home
 
 volumes:
 - name: logic_home
