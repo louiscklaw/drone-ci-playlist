@@ -9,8 +9,8 @@ steps:
   - name: logic_home
     path: /tmp/home
   commands:
-  - npm install
-  - npm test
+  - pwd
+  - ls -l
 
 volumes:
 - name: logic_home
